@@ -1,0 +1,1902 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/media/sf_kicad/00_projects/TeraPCBs/projects/fennek_2017_18/motor/V8/Motor-Control-board-V8_2_KiCAD/Motor_Control.sch</source>
+    <date>Mon 23 Jul 2018 11:44:16 CEST</date>
+    <tool>Eeschema 6.0.0-rc1-unknown-1a22918~65~ubuntu16.04.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Motor Control</title>
+        <company>TERA TU Graz</company>
+        <rev>8.1</rev>
+        <date>2017-05-19</date>
+        <source>Motor_Control.sch</source>
+        <comment number="1" value="SEM 2017 final version"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/Power Stage/" tstamps="/58539C2E/">
+      <title_block>
+        <title>Motor Control</title>
+        <company>TERA TU Graz</company>
+        <rev>8.1</rev>
+        <date>2017-05-19</date>
+        <source>power_stage.sch</source>
+        <comment number="1" value="SEM 2017 final version"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/bridge driver/" tstamps="/58543D84/">
+      <title_block>
+        <title>Motor Control</title>
+        <company>TERA TU Graz</company>
+        <rev>8.1</rev>
+        <date>2017-05-19</date>
+        <source>bridge_driver.sch</source>
+        <comment number="1" value="SEM 2017 final version"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/U/I sense/" tstamps="/5852F1C7/">
+      <title_block>
+        <title>Motor Control</title>
+        <company>TERA TU Graz</company>
+        <rev>8.1</rev>
+        <date>2017-05-19</date>
+        <source>current_amp.sch</source>
+        <comment number="1" value="SEM 2017 final version"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="5" name="/PowerSupply/" tstamps="/58D54AA0/">
+      <title_block>
+        <title>Motor Control</title>
+        <company>TERA TU Graz</company>
+        <rev>8.1</rev>
+        <date>2017-05-19</date>
+        <source>supply.sch</source>
+        <comment number="1" value="SEM 2017 final version"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="6" name="/XMC4x00/" tstamps="/585543FF/">
+      <title_block>
+        <title>Motor Control</title>
+        <company>TERA TU Graz</company>
+        <rev>8.1</rev>
+        <date>2017-05-19</date>
+        <source>prozessor.sch</source>
+        <comment number="1" value="SEM 2017 final version"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="7" name="/XMC4x00/External GPIO/" tstamps="/585543FF/5B4D0A5A/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>ext_gpio.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="P1">
+      <value>CONN_01X03</value>
+      <footprint>tera_Connectors_Phoenix:PhoenixContact_MSTBA-G_03x5.08mm_Angled</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5848B761</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>CONN_01X10</value>
+      <footprint>tera_Connectors_Molex:Molex_PicoBlade_53398-1071_10x1.25mm_Straight</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x10" description="Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>58E51872</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>D</value>
+      <footprint>tera_diodes:SOD-323</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851B63E</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>20R</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851B748</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>BSC016N06NS</value>
+      <footprint>infineon:INF-PG-TDSON-8</footprint>
+      <libsource lib="tera_general" part="BSC016N06NS" description="60V Vds, N-Channel MOSFET, PG-TDSON-8"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851B9D1</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>0R</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851BACD</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>D</value>
+      <footprint>tera_diodes:SOD-323</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851C502</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>20R</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851C508</tstamp>
+    </comp>
+    <comp ref="Q2">
+      <value>BSC016N06NS</value>
+      <footprint>infineon:INF-PG-TDSON-8</footprint>
+      <libsource lib="tera_general" part="BSC016N06NS" description="60V Vds, N-Channel MOSFET, PG-TDSON-8"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851C50E</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>0R</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851C514</tstamp>
+    </comp>
+    <comp ref="D3">
+      <value>D</value>
+      <footprint>tera_diodes:SOD-323</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851D882</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>20R</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851D888</tstamp>
+    </comp>
+    <comp ref="Q3">
+      <value>BSC016N06NS</value>
+      <footprint>infineon:INF-PG-TDSON-8</footprint>
+      <libsource lib="tera_general" part="BSC016N06NS" description="60V Vds, N-Channel MOSFET, PG-TDSON-8"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851D88E</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>0R</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851D894</tstamp>
+    </comp>
+    <comp ref="D4">
+      <value>D</value>
+      <footprint>tera_diodes:SOD-323</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851D8A0</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>20R</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851D8A6</tstamp>
+    </comp>
+    <comp ref="Q4">
+      <value>BSC016N06NS</value>
+      <footprint>infineon:INF-PG-TDSON-8</footprint>
+      <libsource lib="tera_general" part="BSC016N06NS" description="60V Vds, N-Channel MOSFET, PG-TDSON-8"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851D8AC</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>0R</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851D8B2</tstamp>
+    </comp>
+    <comp ref="D5">
+      <value>D</value>
+      <footprint>tera_diodes:SOD-323</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851E76A</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>20R</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851E770</tstamp>
+    </comp>
+    <comp ref="Q5">
+      <value>BSC016N06NS</value>
+      <footprint>infineon:INF-PG-TDSON-8</footprint>
+      <libsource lib="tera_general" part="BSC016N06NS" description="60V Vds, N-Channel MOSFET, PG-TDSON-8"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851E776</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>0R</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851E77C</tstamp>
+    </comp>
+    <comp ref="D6">
+      <value>D</value>
+      <footprint>tera_diodes:SOD-323</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851E788</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>20R</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851E78E</tstamp>
+    </comp>
+    <comp ref="Q6">
+      <value>BSC016N06NS</value>
+      <footprint>infineon:INF-PG-TDSON-8</footprint>
+      <libsource lib="tera_general" part="BSC016N06NS" description="60V Vds, N-Channel MOSFET, PG-TDSON-8"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851E794</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>0R</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5851E79A</tstamp>
+    </comp>
+    <comp ref="X1">
+      <value>gnd_contact</value>
+      <footprint>local_footprints:via_0.4mm</footprint>
+      <libsource lib="local_symbols" part="gnd_contact" description=""/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>58778962</tstamp>
+    </comp>
+    <comp ref="X2">
+      <value>gnd_contact</value>
+      <footprint>local_footprints:via_0.4mm</footprint>
+      <libsource lib="local_symbols" part="gnd_contact" description=""/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>58778968</tstamp>
+    </comp>
+    <comp ref="X3">
+      <value>gnd_contact</value>
+      <footprint>local_footprints:via_0.4mm</footprint>
+      <libsource lib="local_symbols" part="gnd_contact" description=""/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>5877896E</tstamp>
+    </comp>
+    <comp ref="X4">
+      <value>gnd_contact</value>
+      <footprint>local_footprints:via_0.4mm</footprint>
+      <libsource lib="local_symbols" part="gnd_contact" description=""/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>58778F6E</tstamp>
+    </comp>
+    <comp ref="X5">
+      <value>gnd_contact</value>
+      <footprint>local_footprints:via_0.4mm</footprint>
+      <libsource lib="local_symbols" part="gnd_contact" description=""/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>58778F74</tstamp>
+    </comp>
+    <comp ref="X6">
+      <value>gnd_contact</value>
+      <footprint>local_footprints:via_0.4mm</footprint>
+      <libsource lib="local_symbols" part="gnd_contact" description=""/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>58778F7A</tstamp>
+    </comp>
+    <comp ref="X7">
+      <value>gnd_contact</value>
+      <footprint>local_footprints:via_0.4mm</footprint>
+      <libsource lib="local_symbols" part="gnd_contact" description=""/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>587794AF</tstamp>
+    </comp>
+    <comp ref="X8">
+      <value>gnd_contact</value>
+      <footprint>local_footprints:via_0.4mm</footprint>
+      <libsource lib="local_symbols" part="gnd_contact" description=""/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>587794B5</tstamp>
+    </comp>
+    <comp ref="X9">
+      <value>gnd_contact</value>
+      <footprint>local_footprints:via_0.4mm</footprint>
+      <libsource lib="local_symbols" part="gnd_contact" description=""/>
+      <sheetpath names="/Power Stage/" tstamps="/58539C2E/"/>
+      <tstamp>587794BB</tstamp>
+    </comp>
+    <comp ref="IC1">
+      <value>6EDL04N02PR</value>
+      <footprint>tera_atomic_ic:6EDL04N02PR</footprint>
+      <libsource lib="tera_general" part="6EDL04N02PR" description="3-Phase half bridge driver"/>
+      <sheetpath names="/bridge driver/" tstamps="/58543D84/"/>
+      <tstamp>58543DFD</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>0R005</value>
+      <footprint>tera_rlc:R_2512in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/bridge driver/" tstamps="/58543D84/"/>
+      <tstamp>58543F23</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>10uF</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/bridge driver/" tstamps="/58543D84/"/>
+      <tstamp>5854421E</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>10k</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/bridge driver/" tstamps="/58543D84/"/>
+      <tstamp>5854435A</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>4.7nF</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/bridge driver/" tstamps="/58543D84/"/>
+      <tstamp>585447E1</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>330nF</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/bridge driver/" tstamps="/58543D84/"/>
+      <tstamp>58545393</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>330nF</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/bridge driver/" tstamps="/58543D84/"/>
+      <tstamp>58545401</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>330nF</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/bridge driver/" tstamps="/58543D84/"/>
+      <tstamp>5854555E</tstamp>
+    </comp>
+    <comp ref="R16">
+      <value>23k</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/bridge driver/" tstamps="/58543D84/"/>
+      <tstamp>5854892F</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>10nF</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/bridge driver/" tstamps="/58543D84/"/>
+      <tstamp>58548F7A</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>3k3</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/bridge driver/" tstamps="/58543D84/"/>
+      <tstamp>5854912C</tstamp>
+    </comp>
+    <comp ref="X13">
+      <value>gnd_contact</value>
+      <footprint>local_footprints:via_0.4mm</footprint>
+      <libsource lib="local_symbols" part="gnd_contact" description=""/>
+      <sheetpath names="/bridge driver/" tstamps="/58543D84/"/>
+      <tstamp>587671E9</tstamp>
+    </comp>
+    <comp ref="X11">
+      <value>gnd_contact</value>
+      <footprint>local_footprints:via_0.4mm</footprint>
+      <libsource lib="local_symbols" part="gnd_contact" description=""/>
+      <sheetpath names="/bridge driver/" tstamps="/58543D84/"/>
+      <tstamp>58767323</tstamp>
+    </comp>
+    <comp ref="X10">
+      <value>gnd_contact</value>
+      <footprint>local_footprints:via_0.4mm</footprint>
+      <libsource lib="local_symbols" part="gnd_contact" description=""/>
+      <sheetpath names="/bridge driver/" tstamps="/58543D84/"/>
+      <tstamp>5876735A</tstamp>
+    </comp>
+    <comp ref="X12">
+      <value>gnd_contact</value>
+      <footprint>local_footprints:via_0.4mm</footprint>
+      <libsource lib="local_symbols" part="gnd_contact" description=""/>
+      <sheetpath names="/bridge driver/" tstamps="/58543D84/"/>
+      <tstamp>587673CE</tstamp>
+    </comp>
+    <comp ref="IC4">
+      <value>LMV342</value>
+      <footprint>tera_atomic_ic:LMV342</footprint>
+      <libsource lib="tera_general" part="LMV342" description="Dual, Low Power, general purpose Op Amp"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>5852F230</tstamp>
+    </comp>
+    <comp ref="C16">
+      <value>no.Ass.</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>5852F610</tstamp>
+    </comp>
+    <comp ref="R25">
+      <value>0R</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>5852FB3A</tstamp>
+    </comp>
+    <comp ref="C18">
+      <value>100nF</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>585228EB</tstamp>
+    </comp>
+    <comp ref="R24">
+      <value>no.Ass.</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>58523A58</tstamp>
+    </comp>
+    <comp ref="C17">
+      <value>no.Ass.</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>58523A64</tstamp>
+    </comp>
+    <comp ref="R26">
+      <value>0R</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>58523A88</tstamp>
+    </comp>
+    <comp ref="R19">
+      <value>22k</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>5855AE28</tstamp>
+    </comp>
+    <comp ref="R20">
+      <value>1k5</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>5855AE6A</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>100nF</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>5855B54D</tstamp>
+    </comp>
+    <comp ref="R17">
+      <value>22k</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>5855BAA5</tstamp>
+    </comp>
+    <comp ref="R18">
+      <value>1k5</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>5855BAAB</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>100nF</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>5855BABA</tstamp>
+    </comp>
+    <comp ref="R21">
+      <value>22k</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>5855BF8F</tstamp>
+    </comp>
+    <comp ref="R22">
+      <value>1k5</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>5855BF95</tstamp>
+    </comp>
+    <comp ref="C9">
+      <value>100nF</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>5855BFA4</tstamp>
+    </comp>
+    <comp ref="IC2">
+      <value>HO_25-NP/SP33</value>
+      <footprint>tera_atomic_ic:HO_25-NP_SP33</footprint>
+      <libsource lib="tera_general" part="HO_25-NP_SP33" description="LEM HO 8/10/25-P/SP33 Current Hall sensor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>58557B33</tstamp>
+    </comp>
+    <comp ref="R23">
+      <value>no.Ass.</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>5852F54B</tstamp>
+    </comp>
+    <comp ref="C10">
+      <value>47nF</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>5855E020</tstamp>
+    </comp>
+    <comp ref="C12">
+      <value>47nF</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>5855E2CC</tstamp>
+    </comp>
+    <comp ref="C14">
+      <value>4.7nF</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>5855ECC4</tstamp>
+    </comp>
+    <comp ref="IC3">
+      <value>HO_25-NP/SP33</value>
+      <footprint>tera_atomic_ic:HO_25-NP_SP33</footprint>
+      <libsource lib="tera_general" part="HO_25-NP_SP33" description="LEM HO 8/10/25-P/SP33 Current Hall sensor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>5855F7AC</tstamp>
+    </comp>
+    <comp ref="C11">
+      <value>47nF</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>5855F7CC</tstamp>
+    </comp>
+    <comp ref="C13">
+      <value>47nF</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>5855F7DA</tstamp>
+    </comp>
+    <comp ref="C15">
+      <value>4.7nF</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/U/I sense/" tstamps="/5852F1C7/"/>
+      <tstamp>5855F7F8</tstamp>
+    </comp>
+    <comp ref="PS1">
+      <value>DCDC_Stepdown_v3</value>
+      <footprint>Boards_Tera:DCDC_Stepdown_v3</footprint>
+      <libsource lib="tera_general" part="DCDC_Stepdown_v3" description="DCDC converter designed by M. Pumberger at Tera TU Graz. Voltage output depends on the mounted IC."/>
+      <sheetpath names="/PowerSupply/" tstamps="/58D54AA0/"/>
+      <tstamp>58D5CFB5</tstamp>
+    </comp>
+    <comp ref="PS2">
+      <value>DCDC_Stepdown_v3</value>
+      <footprint>Boards_Tera:DCDC_Stepdown_v3</footprint>
+      <libsource lib="tera_general" part="DCDC_Stepdown_v3" description="DCDC converter designed by M. Pumberger at Tera TU Graz. Voltage output depends on the mounted IC."/>
+      <sheetpath names="/PowerSupply/" tstamps="/58D54AA0/"/>
+      <tstamp>58D5D0A5</tstamp>
+    </comp>
+    <comp ref="D7">
+      <value>58V</value>
+      <footprint>tera_diodes:DO-214AA</footprint>
+      <libsource lib="Device" part="D_Zener" description="Zener Diode"/>
+      <sheetpath names="/PowerSupply/" tstamps="/58D54AA0/"/>
+      <tstamp>58D62080</tstamp>
+    </comp>
+    <comp ref="C21">
+      <value>100u</value>
+      <footprint>tera_rlc:ElkoC-12.5x20mm</footprint>
+      <libsource lib="Device" part="CP" description="Polarised capacitor"/>
+      <sheetpath names="/PowerSupply/" tstamps="/58D54AA0/"/>
+      <tstamp>58D6216B</tstamp>
+    </comp>
+    <comp ref="IC5">
+      <value>LT1461ACS8-3.3</value>
+      <footprint>tera_atomic_ic:LT1461ACS8</footprint>
+      <libsource lib="Supply" part="LT1461ACS8-3.3" description="Precision Low Dropout Voltage Reference 0°C...70°C 0.04% 3ppm/°C 3.3V"/>
+      <sheetpath names="/PowerSupply/" tstamps="/58D54AA0/"/>
+      <tstamp>58D798B9</tstamp>
+    </comp>
+    <comp ref="C20">
+      <value>2uF</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <libsource lib="Device" part="CP" description="Polarised capacitor"/>
+      <sheetpath names="/PowerSupply/" tstamps="/58D54AA0/"/>
+      <tstamp>58D7AAFD</tstamp>
+    </comp>
+    <comp ref="C22">
+      <value>1uF</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <libsource lib="Device" part="CP" description="Polarised capacitor"/>
+      <sheetpath names="/PowerSupply/" tstamps="/58D54AA0/"/>
+      <tstamp>58D7AB88</tstamp>
+    </comp>
+    <comp ref="C23">
+      <value>100nF</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/PowerSupply/" tstamps="/58D54AA0/"/>
+      <tstamp>58D7AD2E</tstamp>
+    </comp>
+    <comp ref="C19">
+      <value>100nF</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/PowerSupply/" tstamps="/58D54AA0/"/>
+      <tstamp>58D7AFAA</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>CONN_01X02</value>
+      <footprint>tera_Connectors_Phoenix:PhoenixContact_MSTB-GF_02x5.08mm_Angled_ThreadedFlange</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/PowerSupply/" tstamps="/58D54AA0/"/>
+      <tstamp>58D61D23</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>XMC4x00_board_v3</value>
+      <footprint>Boards_Tera:XMC4x00-board_v3-0</footprint>
+      <libsource lib="tera_general" part="XMC4x00_board_v3" description=""/>
+      <sheetpath names="/XMC4x00/" tstamps="/585543FF/"/>
+      <tstamp>58554486</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>Conn_01x08</value>
+      <footprint>tera_Connectors_JST:JST_EH_B08B-EH-A_08x2.50mm_Straight</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x08" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/XMC4x00/External GPIO/" tstamps="/585543FF/5B4D0A5A/"/>
+      <tstamp>5B4D2004</tstamp>
+    </comp>
+    <comp ref="D8">
+      <value>uClamp3310D_tvs_3v3</value>
+      <footprint>tera_diodes:uClamp3310D_tvs_3v3</footprint>
+      <datasheet>http://www.farnell.com/datasheets/20470.pdf</datasheet>
+      <libsource lib="tera_emc_prodection" part="uClamp3310D_tvs_3v3" description="TVS 3v3: leakage @3v3:0.5uA, Vsb&gt;2.8@50mA, Vpt&gt;3.5V@2uA, Vcl&lt;4.5@1A"/>
+      <sheetpath names="/XMC4x00/External GPIO/" tstamps="/585543FF/5B4D0A5A/"/>
+      <tstamp>5B4D2019</tstamp>
+    </comp>
+    <comp ref="C24">
+      <value>100n</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor"/>
+      <sheetpath names="/XMC4x00/External GPIO/" tstamps="/585543FF/5B4D0A5A/"/>
+      <tstamp>5B4D2FB7</tstamp>
+    </comp>
+    <comp ref="R27">
+      <value>1k</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/XMC4x00/External GPIO/" tstamps="/585543FF/5B4D0A5A/"/>
+      <tstamp>5B4D3034</tstamp>
+    </comp>
+    <comp ref="D9">
+      <value>uClamp3310D_tvs_3v3</value>
+      <footprint>tera_diodes:uClamp3310D_tvs_3v3</footprint>
+      <datasheet>http://www.farnell.com/datasheets/20470.pdf</datasheet>
+      <libsource lib="tera_emc_prodection" part="uClamp3310D_tvs_3v3" description="TVS 3v3: leakage @3v3:0.5uA, Vsb&gt;2.8@50mA, Vpt&gt;3.5V@2uA, Vcl&lt;4.5@1A"/>
+      <sheetpath names="/XMC4x00/External GPIO/" tstamps="/585543FF/5B4D0A5A/"/>
+      <tstamp>5B4D448B</tstamp>
+    </comp>
+    <comp ref="C25">
+      <value>100n</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor"/>
+      <sheetpath names="/XMC4x00/External GPIO/" tstamps="/585543FF/5B4D0A5A/"/>
+      <tstamp>5B4D4491</tstamp>
+    </comp>
+    <comp ref="R28">
+      <value>1k</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/XMC4x00/External GPIO/" tstamps="/585543FF/5B4D0A5A/"/>
+      <tstamp>5B4D4497</tstamp>
+    </comp>
+    <comp ref="D10">
+      <value>uClamp3310D_tvs_3v3</value>
+      <footprint>tera_diodes:uClamp3310D_tvs_3v3</footprint>
+      <datasheet>http://www.farnell.com/datasheets/20470.pdf</datasheet>
+      <libsource lib="tera_emc_prodection" part="uClamp3310D_tvs_3v3" description="TVS 3v3: leakage @3v3:0.5uA, Vsb&gt;2.8@50mA, Vpt&gt;3.5V@2uA, Vcl&lt;4.5@1A"/>
+      <sheetpath names="/XMC4x00/External GPIO/" tstamps="/585543FF/5B4D0A5A/"/>
+      <tstamp>5B4D4825</tstamp>
+    </comp>
+    <comp ref="C26">
+      <value>100n</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor"/>
+      <sheetpath names="/XMC4x00/External GPIO/" tstamps="/585543FF/5B4D0A5A/"/>
+      <tstamp>5B4D482B</tstamp>
+    </comp>
+    <comp ref="R29">
+      <value>1k</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/XMC4x00/External GPIO/" tstamps="/585543FF/5B4D0A5A/"/>
+      <tstamp>5B4D4831</tstamp>
+    </comp>
+    <comp ref="D11">
+      <value>uClamp3310D_tvs_3v3</value>
+      <footprint>tera_diodes:uClamp3310D_tvs_3v3</footprint>
+      <datasheet>http://www.farnell.com/datasheets/20470.pdf</datasheet>
+      <libsource lib="tera_emc_prodection" part="uClamp3310D_tvs_3v3" description="TVS 3v3: leakage @3v3:0.5uA, Vsb&gt;2.8@50mA, Vpt&gt;3.5V@2uA, Vcl&lt;4.5@1A"/>
+      <sheetpath names="/XMC4x00/External GPIO/" tstamps="/585543FF/5B4D0A5A/"/>
+      <tstamp>5B4D484A</tstamp>
+    </comp>
+    <comp ref="C27">
+      <value>100n</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor"/>
+      <sheetpath names="/XMC4x00/External GPIO/" tstamps="/585543FF/5B4D0A5A/"/>
+      <tstamp>5B4D4850</tstamp>
+    </comp>
+    <comp ref="R30">
+      <value>1k</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/XMC4x00/External GPIO/" tstamps="/585543FF/5B4D0A5A/"/>
+      <tstamp>5B4D4856</tstamp>
+    </comp>
+    <comp ref="D12">
+      <value>uClamp3310D_tvs_3v3</value>
+      <footprint>tera_diodes:uClamp3310D_tvs_3v3</footprint>
+      <datasheet>http://www.farnell.com/datasheets/20470.pdf</datasheet>
+      <libsource lib="tera_emc_prodection" part="uClamp3310D_tvs_3v3" description="TVS 3v3: leakage @3v3:0.5uA, Vsb&gt;2.8@50mA, Vpt&gt;3.5V@2uA, Vcl&lt;4.5@1A"/>
+      <sheetpath names="/XMC4x00/External GPIO/" tstamps="/585543FF/5B4D0A5A/"/>
+      <tstamp>5B4D53A9</tstamp>
+    </comp>
+    <comp ref="C28">
+      <value>100n</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor"/>
+      <sheetpath names="/XMC4x00/External GPIO/" tstamps="/585543FF/5B4D0A5A/"/>
+      <tstamp>5B4D53AF</tstamp>
+    </comp>
+    <comp ref="R31">
+      <value>1k</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/XMC4x00/External GPIO/" tstamps="/585543FF/5B4D0A5A/"/>
+      <tstamp>5B4D53B5</tstamp>
+    </comp>
+    <comp ref="D13">
+      <value>uClamp3310D_tvs_3v3</value>
+      <footprint>tera_diodes:uClamp3310D_tvs_3v3</footprint>
+      <datasheet>http://www.farnell.com/datasheets/20470.pdf</datasheet>
+      <libsource lib="tera_emc_prodection" part="uClamp3310D_tvs_3v3" description="TVS 3v3: leakage @3v3:0.5uA, Vsb&gt;2.8@50mA, Vpt&gt;3.5V@2uA, Vcl&lt;4.5@1A"/>
+      <sheetpath names="/XMC4x00/External GPIO/" tstamps="/585543FF/5B4D0A5A/"/>
+      <tstamp>5B4D53CE</tstamp>
+    </comp>
+    <comp ref="C29">
+      <value>100n</value>
+      <footprint>tera_rlc:C_0603in</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor"/>
+      <sheetpath names="/XMC4x00/External GPIO/" tstamps="/585543FF/5B4D0A5A/"/>
+      <tstamp>5B4D53D4</tstamp>
+    </comp>
+    <comp ref="R32">
+      <value>1k</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_Small" description="Resistor, small symbol"/>
+      <sheetpath names="/XMC4x00/External GPIO/" tstamps="/585543FF/5B4D0A5A/"/>
+      <tstamp>5B4D53DA</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x03">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x08">
+      <description>Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x08</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x10">
+      <description>Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x10</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="CP">
+      <description>Polarised capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Small">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D">
+      <description>Diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Zener">
+      <description>Zener Diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Zener</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_Small">
+      <description>Resistor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Supply" part="LT1461">
+      <aliases>
+        <alias>LT1461ACS8</alias>
+        <alias>LT1461ACS8-2.5</alias>
+        <alias>LT1461ACS8-3</alias>
+        <alias>LT1461ACS8-3.3</alias>
+        <alias>LT1461ACS8-4</alias>
+        <alias>LT1461ACS8-5</alias>
+        <alias>LT1461AIS8</alias>
+        <alias>LT1461AIS8-2.5</alias>
+        <alias>LT1461AIS8-3</alias>
+        <alias>LT1461AIS8-3.3</alias>
+        <alias>LT1461AIS8-4</alias>
+        <alias>LT1461AIS8-5</alias>
+        <alias>LT1461BCS8</alias>
+        <alias>LT1461BCS8-2.5</alias>
+        <alias>LT1461BCS8-3</alias>
+        <alias>LT1461BCS8-3.3</alias>
+        <alias>LT1461BCS8-4</alias>
+        <alias>LT1461BCS8-5</alias>
+        <alias>LT1461BIS8</alias>
+        <alias>LT1461BIS8-2.5</alias>
+        <alias>LT1461BIS8-3</alias>
+        <alias>LT1461BIS8-3.3</alias>
+        <alias>LT1461BIS8-4</alias>
+        <alias>LT1461BIS8-5</alias>
+        <alias>LT1461CCS8</alias>
+        <alias>LT1461CCS8-2.5</alias>
+        <alias>LT1461CCS8-3</alias>
+        <alias>LT1461CCS8-3.3</alias>
+        <alias>LT1461CCS8-4</alias>
+        <alias>LT1461CCS8-5</alias>
+        <alias>LT1461CIS8</alias>
+        <alias>LT1461CIS8-2.5</alias>
+        <alias>LT1461CIS8-3</alias>
+        <alias>LT1461CIS8-3.3</alias>
+        <alias>LT1461CIS8-4</alias>
+        <alias>LT1461CIS8-5</alias>
+        <alias>LT1461DHS8</alias>
+        <alias>LT1461DHS8-2.5</alias>
+        <alias>LT1461DHS8-3</alias>
+        <alias>LT1461DHS8-3.3</alias>
+        <alias>LT1461DHS8-4</alias>
+        <alias>LT1461DHS8-5</alias>
+      </aliases>
+      <description>Precision Low Dropout Voltage Reference</description>
+      <docs>http://cds.linear.com/docs/en/datasheet/1461fb.pdf</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">LT1461</field>
+        <field name="Footprint">tera_atomic_ic:LT1461ACS8</field>
+      </fields>
+      <pins>
+        <pin num="2" name="VI+" type="power_in"/>
+        <pin num="3" name="~SHDN" type="input"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="6" name="VREF" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="local_symbols" part="gnd_contact">
+      <fields>
+        <field name="Reference">X</field>
+        <field name="Value">gnd_contact</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="tera_emc_prodection" part="uClamp3310D_tvs_3v3">
+      <description>TVS 3v3: leakage @3v3:0.5uA, Vsb&gt;2.8@50mA, Vpt&gt;3.5V@2uA, Vcl&lt;4.5@1A</description>
+      <docs>http://www.farnell.com/datasheets/20470.pdf</docs>
+      <footprints>
+        <fp>D?</fp>
+        <fp>SO*</fp>
+        <fp>SM*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">uClamp3310D_tvs_3v3</field>
+        <field name="Footprint">tera_diodes:uClamp3310D_tvs_3v3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="tera_general" part="6EDL04N02PR">
+      <description>3-Phase half bridge driver</description>
+      <docs>http://www.infineon.com/dgdl/Infineon-6EDL04X0XXX-DS-v02_06-EN.pdf?fileId=db3a304336797ff901367c18c18445af</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">6EDL04N02PR</field>
+        <field name="Footprint">tera_atomic_ic:6EDL04N02PR</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VCC" type="power_in"/>
+        <pin num="2" name="HIN1" type="input"/>
+        <pin num="3" name="HIN2" type="input"/>
+        <pin num="4" name="HIN3" type="input"/>
+        <pin num="5" name="LIN1" type="input"/>
+        <pin num="6" name="LIN2" type="input"/>
+        <pin num="7" name="LIN3" type="input"/>
+        <pin num="8" name="~FAULT" type="output"/>
+        <pin num="9" name="ITRIP" type="input"/>
+        <pin num="10" name="EN" type="input"/>
+        <pin num="11" name="RCIN" type="passive"/>
+        <pin num="12" name="VSS" type="power_in"/>
+        <pin num="13" name="COM" type="passive"/>
+        <pin num="14" name="LO3" type="output"/>
+        <pin num="15" name="LO2" type="output"/>
+        <pin num="16" name="LO1" type="output"/>
+        <pin num="18" name="VS3" type="power_in"/>
+        <pin num="19" name="HO3" type="output"/>
+        <pin num="20" name="VB3" type="power_in"/>
+        <pin num="22" name="VS2" type="power_in"/>
+        <pin num="23" name="HO2" type="output"/>
+        <pin num="24" name="VB2" type="power_in"/>
+        <pin num="26" name="VS1" type="power_in"/>
+        <pin num="27" name="HO1" type="output"/>
+        <pin num="28" name="VB1" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="tera_general" part="BSC016N06NS">
+      <description>60V Vds, N-Channel MOSFET, PG-TDSON-8</description>
+      <docs>http://www.infineon.com/dgdl/Infineon-BSC016N06NS-DS-v02_01-en.pdf?fileId=db3a3043353fdc160135532b353c483c</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BSC016N06NS</field>
+        <field name="Footprint">infineon:INF-PG-TDSON-8</field>
+        <field name="HPN">24-2002</field>
+      </fields>
+      <pins>
+        <pin num="1" name="G" type="input"/>
+        <pin num="2" name="S" type="passive"/>
+        <pin num="3" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="tera_general" part="DCDC_Stepdown_v3">
+      <description>DCDC converter designed by M. Pumberger at Tera TU Graz. Voltage output depends on the mounted IC.</description>
+      <fields>
+        <field name="Reference">PS</field>
+        <field name="Value">DCDC_Stepdown_v3</field>
+        <field name="Footprint">Boards_Tera:DCDC_Stepdown_v3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VIN" type="power_in"/>
+        <pin num="2" name="VOUT" type="power_out"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="tera_general" part="HO_25-NP_SP33">
+      <description>LEM HO 8/10/25-P/SP33 Current Hall sensor</description>
+      <docs>http://www.lem.com/docs/products/ho-np_sp33-1000_series.pdf</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">HO_25-NP_SP33</field>
+        <field name="Footprint">tera_atomic_ic:HO_25-NP_SP33</field>
+        <field name="HPN">98-1001</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VCC" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="Vout" type="output"/>
+        <pin num="4" name="Vref" type="passive"/>
+        <pin num="5" name="OCD" type="output"/>
+        <pin num="6" name="Standby" type="input"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="IN1" type="passive"/>
+        <pin num="9" name="IN2" type="passive"/>
+        <pin num="10" name="IN3" type="passive"/>
+        <pin num="11" name="OUT1" type="passive"/>
+        <pin num="12" name="OUT2" type="passive"/>
+        <pin num="13" name="OUT3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="tera_general" part="LMV342">
+      <description>Dual, Low Power, general purpose Op Amp</description>
+      <docs>http://www.farnell.com/datasheets/90091.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LMV342</field>
+        <field name="Footprint">tera_atomic_ic:LMV342</field>
+        <field name="HPN">20-0008</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="output"/>
+        <pin num="2" name="-" type="input"/>
+        <pin num="3" name="+" type="input"/>
+        <pin num="4" name="V-" type="power_in"/>
+        <pin num="5" name="+" type="input"/>
+        <pin num="6" name="-" type="input"/>
+        <pin num="7" name="~" type="output"/>
+        <pin num="8" name="V+" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="tera_general" part="XMC4x00_board_v3">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">XMC4x00_board_v3</field>
+        <field name="Footprint">Boards_Tera:XMC4x00-board_v3-0</field>
+        <field name="HPN">99-0004</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND_1" type="power_in"/>
+        <pin num="2" name="3V3_1" type="power_in"/>
+        <pin num="3" name="3V3_2" type="power_in"/>
+        <pin num="4" name="P14.14" type="BiDi"/>
+        <pin num="5" name="P14.7" type="BiDi"/>
+        <pin num="6" name="P14.6" type="BiDi"/>
+        <pin num="7" name="P14.8" type="BiDi"/>
+        <pin num="8" name="P14.9" type="BiDi"/>
+        <pin num="9" name="GND_2" type="power_in"/>
+        <pin num="10" name="GND_3" type="power_in"/>
+        <pin num="11" name="P2.9" type="BiDi"/>
+        <pin num="12" name="P2.8" type="BiDi"/>
+        <pin num="13" name="P2.5" type="BiDi"/>
+        <pin num="14" name="P2.4" type="BiDi"/>
+        <pin num="15" name="P2.3" type="BiDi"/>
+        <pin num="16" name="P2.2" type="BiDi"/>
+        <pin num="17" name="3V3_4" type="power_in"/>
+        <pin num="18" name="GND_4" type="power_in"/>
+        <pin num="19" name="CAN1-L" type="BiDi"/>
+        <pin num="20" name="CAN1-H" type="BiDi"/>
+        <pin num="21" name="GND_5" type="power_in"/>
+        <pin num="22" name="VDDA" type="power_in"/>
+        <pin num="23" name="GND_6" type="power_in"/>
+        <pin num="24" name="5V_1" type="power_in"/>
+        <pin num="25" name="5V_2" type="power_in"/>
+        <pin num="26" name="GND_7" type="power_in"/>
+        <pin num="27" name="VBAT" type="power_in"/>
+        <pin num="28" name="GND_8" type="power_in"/>
+        <pin num="29" name="3V3_5" type="power_in"/>
+        <pin num="30" name="GND_9" type="power_in"/>
+        <pin num="31" name="GND_10" type="power_in"/>
+        <pin num="32" name="P14.0" type="BiDi"/>
+        <pin num="33" name="P14.3" type="BiDi"/>
+        <pin num="34" name="P14.4" type="BiDi"/>
+        <pin num="35" name="P14.5" type="BiDi"/>
+        <pin num="36" name="GND_11" type="power_in"/>
+        <pin num="37" name="HIB_IO" type="BiDi"/>
+        <pin num="38" name="P3.0" type="BiDi"/>
+        <pin num="39" name="3V3_6" type="power_in"/>
+        <pin num="40" name="GND_12" type="power_in"/>
+        <pin num="41" name="GND_13" type="power_in"/>
+        <pin num="42" name="3V3_7" type="power_in"/>
+        <pin num="43" name="P0.0" type="BiDi"/>
+        <pin num="44" name="P0.1" type="BiDi"/>
+        <pin num="45" name="P0.2" type="BiDi"/>
+        <pin num="46" name="P0.3" type="BiDi"/>
+        <pin num="47" name="P0.4" type="BiDi"/>
+        <pin num="48" name="P0.5" type="BiDi"/>
+        <pin num="49" name="P0.6" type="BiDi"/>
+        <pin num="50" name="P0.11" type="BiDi"/>
+        <pin num="51" name="P0.7" type="BiDi"/>
+        <pin num="52" name="P0.8" type="BiDi"/>
+        <pin num="53" name="P0.10" type="BiDi"/>
+        <pin num="54" name="P0.9" type="BiDi"/>
+        <pin num="55" name="USB_DM" type="BiDi"/>
+        <pin num="56" name="USB_DP" type="BiDi"/>
+        <pin num="57" name="P2.15|RS232_Rx" type="BiDi"/>
+        <pin num="58" name="P2.14|RS232_Tx" type="BiDi"/>
+        <pin num="59" name="3V3_8" type="power_in"/>
+        <pin num="60" name="GND_14" type="power_in"/>
+        <pin num="61" name="GND_15" type="power_in"/>
+        <pin num="62" name="3V3_9" type="power_in"/>
+        <pin num="63" name="~PORST" type="BiDi"/>
+        <pin num="64" name="P2.1|SWO" type="BiDi"/>
+        <pin num="65" name="TCK|SWD_CLK" type="BiDi"/>
+        <pin num="66" name="TMS|SWD_IO" type="BiDi"/>
+        <pin num="67" name="NC_or_P1.15" type="BiDi"/>
+        <pin num="68" name="CAN0-L_or_P1.5|CAN0_Rx" type="BiDi"/>
+        <pin num="69" name="CAN0-H_or_P1.4|CAN0_Tx" type="BiDi"/>
+        <pin num="70" name="GND_16" type="power_in"/>
+        <pin num="71" name="GND_17" type="power_in"/>
+        <pin num="72" name="P1.3" type="BiDi"/>
+        <pin num="73" name="P1.2" type="BiDi"/>
+        <pin num="74" name="P1.1" type="BiDi"/>
+        <pin num="75" name="P1.0" type="BiDi"/>
+        <pin num="76" name="P1.7|LED1" type="BiDi"/>
+        <pin num="77" name="P1.8|LED2" type="BiDi"/>
+        <pin num="78" name="P1.9|LED3" type="BiDi"/>
+        <pin num="79" name="3V3_10" type="power_in"/>
+        <pin num="80" name="GND_18" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector_Generic">
+      <uri>/media/sf_kicad/04_libs_my_fork/kicad-symbols/Connector_Generic.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>/media/sf_kicad/04_libs_my_fork/kicad-symbols/Device.lib</uri>
+    </library>
+    <library logical="Supply">
+      <uri>/media/sf_kicad/00_projects/TeraPCBs/libs/kicad/tera_symbols/Supply.lib</uri>
+    </library>
+    <library logical="local_symbols">
+      <uri>/media/sf_kicad/00_projects/TeraPCBs/projects/fennek_2017_18/motor/V8/Motor-Control-board-V8_2_KiCAD/local_symbols.lib</uri>
+    </library>
+    <library logical="tera_emc_prodection">
+      <uri>/media/sf_kicad/00_projects/TeraPCBs/libs/kicad/tera_symbols/tera_emc_prodection.lib</uri>
+    </library>
+    <library logical="tera_general">
+      <uri>/media/sf_kicad/00_projects/TeraPCBs/libs/kicad/tera_symbols/tera_general.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/W">
+      <node ref="X6" pin="1"/>
+      <node ref="Q3" pin="2"/>
+      <node ref="P1" pin="2"/>
+      <node ref="X4" pin="1"/>
+      <node ref="X5" pin="1"/>
+      <node ref="R17" pin="1"/>
+      <node ref="C4" pin="2"/>
+      <node ref="Q4" pin="3"/>
+      <node ref="IC1" pin="22"/>
+    </net>
+    <net code="2" name="/XMC4x00/MAGINC">
+      <node ref="J1" pin="6"/>
+      <node ref="U1" pin="52"/>
+    </net>
+    <net code="3" name="/XMC4x00/MAGDEC">
+      <node ref="U1" pin="53"/>
+      <node ref="J1" pin="7"/>
+    </net>
+    <net code="4" name="/XMC4x00/ENC_A">
+      <node ref="U1" pin="72"/>
+      <node ref="J1" pin="8"/>
+    </net>
+    <net code="5" name="/XMC4x00/ENC_B">
+      <node ref="J1" pin="9"/>
+      <node ref="U1" pin="73"/>
+    </net>
+    <net code="6" name="/LEM_standby">
+      <node ref="IC2" pin="6"/>
+      <node ref="IC3" pin="6"/>
+      <node ref="U1" pin="54"/>
+    </net>
+    <net code="7" name="/XMC4x00/rotary_CSn">
+      <node ref="J1" pin="5"/>
+      <node ref="U1" pin="75"/>
+    </net>
+    <net code="8" name="/U/I sense/U_out">
+      <node ref="IC3" pin="8"/>
+      <node ref="IC3" pin="10"/>
+      <node ref="IC3" pin="9"/>
+      <node ref="P1" pin="3"/>
+    </net>
+    <net code="9" name="+BATT">
+      <node ref="Q1" pin="3"/>
+      <node ref="Q3" pin="3"/>
+      <node ref="C21" pin="1"/>
+      <node ref="Q5" pin="3"/>
+      <node ref="D7" pin="1"/>
+      <node ref="J3" pin="2"/>
+      <node ref="PS2" pin="1"/>
+      <node ref="PS1" pin="1"/>
+    </net>
+    <net code="10" name="+12V">
+      <node ref="IC1" pin="1"/>
+      <node ref="C19" pin="1"/>
+      <node ref="PS1" pin="2"/>
+      <node ref="IC5" pin="2"/>
+      <node ref="IC5" pin="3"/>
+      <node ref="C2" pin="1"/>
+      <node ref="C20" pin="1"/>
+    </net>
+    <net code="11" name="+3V3">
+      <node ref="U1" pin="62"/>
+      <node ref="IC2" pin="1"/>
+      <node ref="U1" pin="17"/>
+      <node ref="U1" pin="27"/>
+      <node ref="J2" pin="8"/>
+      <node ref="C11" pin="1"/>
+      <node ref="IC4" pin="8"/>
+      <node ref="U1" pin="79"/>
+      <node ref="U1" pin="42"/>
+      <node ref="C18" pin="1"/>
+      <node ref="U1" pin="59"/>
+      <node ref="U1" pin="39"/>
+      <node ref="U1" pin="2"/>
+      <node ref="U1" pin="3"/>
+      <node ref="U1" pin="29"/>
+      <node ref="PS2" pin="2"/>
+      <node ref="IC3" pin="1"/>
+      <node ref="J1" pin="10"/>
+      <node ref="C10" pin="1"/>
+      <node ref="R13" pin="2"/>
+      <node ref="R16" pin="1"/>
+    </net>
+    <net code="12" name="/bridge driver/LIN_V">
+      <node ref="U1" pin="45"/>
+      <node ref="IC1" pin="7"/>
+    </net>
+    <net code="13" name="/bridge driver/LOUT_U">
+      <node ref="D2" pin="1"/>
+      <node ref="IC1" pin="16"/>
+      <node ref="R2" pin="1"/>
+    </net>
+    <net code="14" name="/bridge driver/HOUT_U">
+      <node ref="IC1" pin="27"/>
+      <node ref="D1" pin="1"/>
+      <node ref="R1" pin="1"/>
+    </net>
+    <net code="15" name="/U">
+      <node ref="X3" pin="1"/>
+      <node ref="C3" pin="2"/>
+      <node ref="X2" pin="1"/>
+      <node ref="IC1" pin="26"/>
+      <node ref="X1" pin="1"/>
+      <node ref="R21" pin="1"/>
+      <node ref="IC3" pin="13"/>
+      <node ref="IC3" pin="12"/>
+      <node ref="Q1" pin="2"/>
+      <node ref="IC3" pin="11"/>
+      <node ref="Q2" pin="3"/>
+    </net>
+    <net code="16" name="/V">
+      <node ref="IC2" pin="9"/>
+      <node ref="IC2" pin="10"/>
+      <node ref="Q5" pin="2"/>
+      <node ref="R19" pin="1"/>
+      <node ref="IC1" pin="18"/>
+      <node ref="IC2" pin="8"/>
+      <node ref="C5" pin="2"/>
+      <node ref="Q6" pin="3"/>
+      <node ref="X7" pin="1"/>
+      <node ref="X8" pin="1"/>
+      <node ref="X9" pin="1"/>
+    </net>
+    <net code="17" name="/voltage_u">
+      <node ref="U1" pin="35"/>
+      <node ref="R21" pin="2"/>
+      <node ref="R22" pin="1"/>
+      <node ref="C9" pin="1"/>
+    </net>
+    <net code="18" name="/voltage_v">
+      <node ref="R19" pin="2"/>
+      <node ref="C8" pin="1"/>
+      <node ref="U1" pin="6"/>
+      <node ref="R20" pin="1"/>
+    </net>
+    <net code="19" name="/voltage_w">
+      <node ref="R17" pin="2"/>
+      <node ref="U1" pin="5"/>
+      <node ref="R18" pin="1"/>
+      <node ref="C7" pin="1"/>
+    </net>
+    <net code="20" name="/bridge driver/LIN_W">
+      <node ref="IC1" pin="6"/>
+      <node ref="U1" pin="44"/>
+    </net>
+    <net code="21" name="/bridge driver/HIN_W">
+      <node ref="U1" pin="47"/>
+      <node ref="IC1" pin="3"/>
+    </net>
+    <net code="22" name="/bridge driver/HIN_V">
+      <node ref="IC1" pin="4"/>
+      <node ref="U1" pin="48"/>
+    </net>
+    <net code="23" name="/bridge driver/LIN_U">
+      <node ref="IC1" pin="5"/>
+      <node ref="U1" pin="43"/>
+    </net>
+    <net code="24" name="/bridge driver/HIN_U">
+      <node ref="U1" pin="46"/>
+      <node ref="IC1" pin="2"/>
+    </net>
+    <net code="25" name="/XMC4x00/~FAULT">
+      <node ref="U1" pin="50"/>
+      <node ref="R13" pin="1"/>
+      <node ref="IC1" pin="8"/>
+    </net>
+    <net code="26" name="/XMC4x00/EN">
+      <node ref="IC1" pin="10"/>
+      <node ref="U1" pin="51"/>
+    </net>
+    <net code="27" name="GND">
+      <node ref="PS2" pin="4"/>
+      <node ref="PS2" pin="3"/>
+      <node ref="U1" pin="40"/>
+      <node ref="U1" pin="31"/>
+      <node ref="U1" pin="21"/>
+      <node ref="U1" pin="80"/>
+      <node ref="U1" pin="70"/>
+      <node ref="U1" pin="60"/>
+      <node ref="U1" pin="30"/>
+      <node ref="U1" pin="10"/>
+      <node ref="U1" pin="9"/>
+      <node ref="U1" pin="1"/>
+      <node ref="U1" pin="41"/>
+      <node ref="U1" pin="28"/>
+      <node ref="U1" pin="61"/>
+      <node ref="U1" pin="71"/>
+      <node ref="U1" pin="23"/>
+      <node ref="U1" pin="26"/>
+      <node ref="U1" pin="36"/>
+      <node ref="U1" pin="18"/>
+      <node ref="C23" pin="2"/>
+      <node ref="X13" pin="1"/>
+      <node ref="X11" pin="1"/>
+      <node ref="X10" pin="1"/>
+      <node ref="X12" pin="1"/>
+      <node ref="PS1" pin="3"/>
+      <node ref="PS1" pin="4"/>
+      <node ref="C21" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="IC1" pin="12"/>
+      <node ref="C2" pin="2"/>
+      <node ref="IC5" pin="4"/>
+      <node ref="R14" pin="2"/>
+      <node ref="C6" pin="2"/>
+      <node ref="C20" pin="2"/>
+      <node ref="C22" pin="2"/>
+      <node ref="D9" pin="2"/>
+      <node ref="C25" pin="2"/>
+      <node ref="J2" pin="1"/>
+      <node ref="C7" pin="2"/>
+      <node ref="C14" pin="2"/>
+      <node ref="D12" pin="2"/>
+      <node ref="C28" pin="2"/>
+      <node ref="IC3" pin="2"/>
+      <node ref="IC3" pin="7"/>
+      <node ref="IC2" pin="7"/>
+      <node ref="C10" pin="2"/>
+      <node ref="IC4" pin="4"/>
+      <node ref="C15" pin="2"/>
+      <node ref="D11" pin="2"/>
+      <node ref="C17" pin="2"/>
+      <node ref="C24" pin="2"/>
+      <node ref="C13" pin="2"/>
+      <node ref="C11" pin="2"/>
+      <node ref="R18" pin="2"/>
+      <node ref="C8" pin="2"/>
+      <node ref="R20" pin="2"/>
+      <node ref="D8" pin="2"/>
+      <node ref="IC2" pin="2"/>
+      <node ref="C9" pin="2"/>
+      <node ref="R22" pin="2"/>
+      <node ref="C18" pin="2"/>
+      <node ref="C27" pin="2"/>
+      <node ref="C16" pin="2"/>
+      <node ref="C26" pin="2"/>
+      <node ref="D10" pin="2"/>
+      <node ref="D7" pin="2"/>
+      <node ref="J3" pin="1"/>
+      <node ref="C19" pin="2"/>
+      <node ref="J1" pin="1"/>
+      <node ref="D13" pin="2"/>
+      <node ref="C29" pin="2"/>
+      <node ref="C12" pin="2"/>
+    </net>
+    <net code="28" name="/XMC4x00/rotary_PDIO">
+      <node ref="J1" pin="2"/>
+      <node ref="U1" pin="69"/>
+    </net>
+    <net code="29" name="/XMC4x00/rotary_DI">
+      <node ref="J1" pin="3"/>
+      <node ref="U1" pin="68"/>
+    </net>
+    <net code="30" name="/XMC4x00/rotary_CLK">
+      <node ref="J1" pin="4"/>
+      <node ref="U1" pin="74"/>
+    </net>
+    <net code="31" name="/U/I sense/V_out">
+      <node ref="IC2" pin="12"/>
+      <node ref="IC2" pin="11"/>
+      <node ref="IC2" pin="13"/>
+      <node ref="P1" pin="1"/>
+    </net>
+    <net code="32" name="/VDDA">
+      <node ref="IC5" pin="6"/>
+      <node ref="C23" pin="1"/>
+      <node ref="U1" pin="22"/>
+      <node ref="C22" pin="1"/>
+    </net>
+    <net code="33" name="/bridge driver/HOUT_V">
+      <node ref="D5" pin="1"/>
+      <node ref="IC1" pin="19"/>
+      <node ref="R5" pin="1"/>
+    </net>
+    <net code="34" name="/current_u_amp">
+      <node ref="U1" pin="34"/>
+      <node ref="IC4" pin="7"/>
+      <node ref="IC4" pin="6"/>
+      <node ref="R26" pin="1"/>
+    </net>
+    <net code="35" name="/current_v_amp">
+      <node ref="U1" pin="33"/>
+      <node ref="IC4" pin="2"/>
+      <node ref="R25" pin="1"/>
+      <node ref="IC4" pin="1"/>
+    </net>
+    <net code="36" name="/bridge driver/HOUT_W">
+      <node ref="R3" pin="1"/>
+      <node ref="D3" pin="1"/>
+      <node ref="IC1" pin="23"/>
+    </net>
+    <net code="37" name="/bridge driver/LOUT_V">
+      <node ref="IC1" pin="14"/>
+      <node ref="D6" pin="1"/>
+      <node ref="R6" pin="1"/>
+    </net>
+    <net code="38" name="/bridge driver/LOUT_W">
+      <node ref="R4" pin="1"/>
+      <node ref="D4" pin="1"/>
+      <node ref="IC1" pin="15"/>
+    </net>
+    <net code="39" name="/bridge driver/COM">
+      <node ref="R14" pin="1"/>
+      <node ref="Q6" pin="2"/>
+      <node ref="R15" pin="2"/>
+      <node ref="IC1" pin="13"/>
+      <node ref="Q2" pin="2"/>
+      <node ref="Q4" pin="2"/>
+    </net>
+    <net code="40" name="Net-(C13-Pad1)">
+      <node ref="C13" pin="1"/>
+      <node ref="IC3" pin="4"/>
+    </net>
+    <net code="41" name="Net-(IC3-Pad5)">
+      <node ref="IC3" pin="5"/>
+    </net>
+    <net code="42" name="Net-(IC2-Pad5)">
+      <node ref="IC2" pin="5"/>
+    </net>
+    <net code="43" name="Net-(C16-Pad1)">
+      <node ref="C16" pin="1"/>
+      <node ref="R25" pin="2"/>
+      <node ref="R23" pin="1"/>
+      <node ref="IC4" pin="3"/>
+    </net>
+    <net code="44" name="Net-(C15-Pad1)">
+      <node ref="C15" pin="1"/>
+      <node ref="IC3" pin="3"/>
+      <node ref="R24" pin="2"/>
+    </net>
+    <net code="45" name="Net-(C14-Pad1)">
+      <node ref="C14" pin="1"/>
+      <node ref="R23" pin="2"/>
+      <node ref="IC2" pin="3"/>
+    </net>
+    <net code="46" name="Net-(C17-Pad1)">
+      <node ref="R24" pin="1"/>
+      <node ref="C17" pin="1"/>
+      <node ref="R26" pin="2"/>
+      <node ref="IC4" pin="5"/>
+    </net>
+    <net code="47" name="Net-(C12-Pad1)">
+      <node ref="IC2" pin="4"/>
+      <node ref="C12" pin="1"/>
+    </net>
+    <net code="48" name="Net-(D2-Pad2)">
+      <node ref="R2" pin="2"/>
+      <node ref="R8" pin="2"/>
+      <node ref="D2" pin="2"/>
+    </net>
+    <net code="49" name="Net-(Q2-Pad1)">
+      <node ref="Q2" pin="1"/>
+      <node ref="R8" pin="1"/>
+    </net>
+    <net code="50" name="Net-(D1-Pad2)">
+      <node ref="R1" pin="2"/>
+      <node ref="D1" pin="2"/>
+      <node ref="R7" pin="2"/>
+    </net>
+    <net code="51" name="Net-(Q1-Pad1)">
+      <node ref="R7" pin="1"/>
+      <node ref="Q1" pin="1"/>
+    </net>
+    <net code="52" name="Net-(D4-Pad2)">
+      <node ref="D4" pin="2"/>
+      <node ref="R4" pin="2"/>
+      <node ref="R10" pin="2"/>
+    </net>
+    <net code="53" name="Net-(Q4-Pad1)">
+      <node ref="Q4" pin="1"/>
+      <node ref="R10" pin="1"/>
+    </net>
+    <net code="54" name="Net-(D3-Pad2)">
+      <node ref="R9" pin="2"/>
+      <node ref="D3" pin="2"/>
+      <node ref="R3" pin="2"/>
+    </net>
+    <net code="55" name="Net-(Q3-Pad1)">
+      <node ref="R9" pin="1"/>
+      <node ref="Q3" pin="1"/>
+    </net>
+    <net code="56" name="Net-(D5-Pad2)">
+      <node ref="D5" pin="2"/>
+      <node ref="R5" pin="2"/>
+      <node ref="R11" pin="2"/>
+    </net>
+    <net code="57" name="Net-(D6-Pad2)">
+      <node ref="R12" pin="2"/>
+      <node ref="R6" pin="2"/>
+      <node ref="D6" pin="2"/>
+    </net>
+    <net code="58" name="Net-(Q5-Pad1)">
+      <node ref="Q5" pin="1"/>
+      <node ref="R11" pin="1"/>
+    </net>
+    <net code="59" name="Net-(Q6-Pad1)">
+      <node ref="Q6" pin="1"/>
+      <node ref="R12" pin="1"/>
+    </net>
+    <net code="60" name="Net-(C3-Pad1)">
+      <node ref="C3" pin="1"/>
+      <node ref="IC1" pin="28"/>
+    </net>
+    <net code="61" name="Net-(C1-Pad1)">
+      <node ref="C1" pin="1"/>
+      <node ref="IC1" pin="11"/>
+    </net>
+    <net code="62" name="/bridge driver/I_trip">
+      <node ref="IC1" pin="9"/>
+      <node ref="C6" pin="1"/>
+      <node ref="R15" pin="1"/>
+      <node ref="R16" pin="2"/>
+    </net>
+    <net code="63" name="Net-(C5-Pad1)">
+      <node ref="C5" pin="1"/>
+      <node ref="IC1" pin="20"/>
+    </net>
+    <net code="64" name="Net-(C4-Pad1)">
+      <node ref="IC1" pin="24"/>
+      <node ref="C4" pin="1"/>
+    </net>
+    <net code="65" name="Net-(U1-Pad37)">
+      <node ref="U1" pin="37"/>
+    </net>
+    <net code="66" name="Net-(U1-Pad25)">
+      <node ref="U1" pin="25"/>
+    </net>
+    <net code="67" name="Net-(U1-Pad24)">
+      <node ref="U1" pin="24"/>
+    </net>
+    <net code="68" name="Net-(U1-Pad67)">
+      <node ref="U1" pin="67"/>
+    </net>
+    <net code="69" name="Net-(U1-Pad20)">
+      <node ref="U1" pin="20"/>
+    </net>
+    <net code="70" name="Net-(U1-Pad19)">
+      <node ref="U1" pin="19"/>
+    </net>
+    <net code="71" name="Net-(U1-Pad57)">
+      <node ref="U1" pin="57"/>
+    </net>
+    <net code="72" name="Net-(U1-Pad58)">
+      <node ref="U1" pin="58"/>
+    </net>
+    <net code="73" name="Net-(U1-Pad55)">
+      <node ref="U1" pin="55"/>
+    </net>
+    <net code="74" name="Net-(U1-Pad56)">
+      <node ref="U1" pin="56"/>
+    </net>
+    <net code="75" name="Net-(U1-Pad76)">
+      <node ref="U1" pin="76"/>
+    </net>
+    <net code="76" name="Net-(U1-Pad77)">
+      <node ref="U1" pin="77"/>
+    </net>
+    <net code="77" name="Net-(U1-Pad78)">
+      <node ref="U1" pin="78"/>
+    </net>
+    <net code="78" name="Net-(U1-Pad4)">
+      <node ref="U1" pin="4"/>
+    </net>
+    <net code="79" name="Net-(U1-Pad7)">
+      <node ref="U1" pin="7"/>
+    </net>
+    <net code="80" name="Net-(U1-Pad8)">
+      <node ref="U1" pin="8"/>
+    </net>
+    <net code="81" name="Net-(U1-Pad32)">
+      <node ref="U1" pin="32"/>
+    </net>
+    <net code="82" name="Net-(U1-Pad64)">
+      <node ref="U1" pin="64"/>
+    </net>
+    <net code="83" name="Net-(U1-Pad65)">
+      <node ref="U1" pin="65"/>
+    </net>
+    <net code="84" name="Net-(U1-Pad66)">
+      <node ref="U1" pin="66"/>
+    </net>
+    <net code="85" name="Net-(U1-Pad63)">
+      <node ref="U1" pin="63"/>
+    </net>
+    <net code="86" name="/XMC4x00/External GPIO/P2.2">
+      <node ref="U1" pin="16"/>
+      <node ref="R27" pin="2"/>
+    </net>
+    <net code="87" name="Net-(U1-Pad38)">
+      <node ref="U1" pin="38"/>
+    </net>
+    <net code="88" name="/XMC4x00/External GPIO/P2.3">
+      <node ref="U1" pin="15"/>
+      <node ref="R28" pin="2"/>
+    </net>
+    <net code="89" name="/XMC4x00/External GPIO/P2.4">
+      <node ref="U1" pin="14"/>
+      <node ref="R29" pin="2"/>
+    </net>
+    <net code="90" name="/XMC4x00/External GPIO/P2.5">
+      <node ref="U1" pin="13"/>
+      <node ref="R30" pin="2"/>
+    </net>
+    <net code="91" name="/XMC4x00/External GPIO/P2.8">
+      <node ref="R31" pin="2"/>
+      <node ref="U1" pin="12"/>
+    </net>
+    <net code="92" name="/XMC4x00/External GPIO/P2.9">
+      <node ref="U1" pin="11"/>
+      <node ref="R32" pin="2"/>
+    </net>
+    <net code="93" name="Net-(U1-Pad49)">
+      <node ref="U1" pin="49"/>
+    </net>
+    <net code="94" name="/XMC4x00/External GPIO/Ext_P2.9">
+      <node ref="R32" pin="1"/>
+      <node ref="C29" pin="1"/>
+      <node ref="D13" pin="1"/>
+      <node ref="J2" pin="2"/>
+    </net>
+    <net code="95" name="/XMC4x00/External GPIO/Ext_P2.5">
+      <node ref="D11" pin="1"/>
+      <node ref="C27" pin="1"/>
+      <node ref="R30" pin="1"/>
+      <node ref="J2" pin="4"/>
+    </net>
+    <net code="96" name="/XMC4x00/External GPIO/Ext_P2.8">
+      <node ref="D12" pin="1"/>
+      <node ref="C28" pin="1"/>
+      <node ref="R31" pin="1"/>
+      <node ref="J2" pin="3"/>
+    </net>
+    <net code="97" name="/XMC4x00/External GPIO/Ext_P2.2">
+      <node ref="J2" pin="7"/>
+      <node ref="R27" pin="1"/>
+      <node ref="C24" pin="1"/>
+      <node ref="D8" pin="1"/>
+    </net>
+    <net code="98" name="/XMC4x00/External GPIO/Ext_P2.3">
+      <node ref="J2" pin="6"/>
+      <node ref="D9" pin="1"/>
+      <node ref="C25" pin="1"/>
+      <node ref="R28" pin="1"/>
+    </net>
+    <net code="99" name="/XMC4x00/External GPIO/Ext_P2.4">
+      <node ref="C26" pin="1"/>
+      <node ref="R29" pin="1"/>
+      <node ref="D10" pin="1"/>
+      <node ref="J2" pin="5"/>
+    </net>
+  </nets>
+</export>

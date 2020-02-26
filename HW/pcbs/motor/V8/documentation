@@ -1,0 +1,57 @@
+Schematic
+	* uC: Infineon XMC da von Infineon apps zur motorsteuerung bereitgestellt werden
+		vorteile: einfache Programierung, regelungsapp von infineon über GUI configurierbar
+		nachteile: Programierung (infineon Dave) geht nur unter Windows
+	
+	* FET treiberstufe: infineon 6EDL04N02PR da dieser IC (inclusive verzögerungszeiten etc.) unter dave bekannt ist --> einfachere programierung
+	
+	* FETs: abwägen ob sehr niederohming (=geringe ohmsche verluste) oder kleine gatekapazitäten (=kleine schaltverluste)
+		
+		Aus http://www.eetimes.com/document.asp?doc_id=1278970
+		„for applications in the 50 W to 75 W range, conduction loss and switching loss contribute similar amounts of loss. In applications at about 25 W and below, switching loss begins to dominate loss calculations.“
+		
+		==> je nach fahrstrategie: dauerhafte beschleunigung: (P~=30W) ==> Qg wichtiger
+		Nur zum beschleunigen, sonst motor controller nicht mit energie versorgt ==> RD_on wichtiger!
+		
+		Vorauswahl:
+			BSC016N06NS	R=1.2mOhm, Qg=81nC : http://www.infineon.com/dgdl/Infineon-BSC016N06NS-DS-v02_01-en.pdf?fileId=db3a3043353fdc160135532b353c483c
+			BSZ042N06N	R=4.2mOhm, Qg=32nC: http://www.infineon.com/dgdl/Infineon-BSZ042N06NS-DS-v02_03-EN.pdf?fileId=db3a3043345a30bc013465d4bf1862fd
+			
+	* Stromsensoren: (siehe teambox (http://teambox.tera.tugraz.at/projects/fennek2017/tasks/1860)
+		LEM (HO8-SP/NP1000) viel genauer ist (0,8% Error im gegensatz zu 2%) und hat 3,3V Versorgung, ACS712 würde als einziger Bauteil 5V benötigen = unnötige zusätzliche Versorgung.
+		3,3V Alternative von ACS wäre ACS711 (mit nur 4mA versorgungsstrom wsl. Besser geeignet, wird vlt. In der nächsten version verwendet)
+
+	* 6EDL04N02PR beschaltung: siehe datenblat.
+		RCIN kondensator stellt die totzeit nach einem fehlerfall (z.B. HIN=LIN=1) ein.
+		
+	* I_trip und Rshunt berechnung: http://www.infineon.com/dgdl/Infineon-Tips+and+Tricks+for+RCIN+and+ITRIP-AN-v02_00-EN.pdf?fileId=5546d4624e765da5014eab0d3e245ad7
+		I_trip_th = 0.445V
+		I_trip = (0.445V-U_rf)/Rshunt
+		U_rf = 3.3V*Rf / (R_up + Rf)
+		I_trip = 20A
+
+	* Kondesator werte für High-Side gate driver charge pump : http://www.infineon.com/dgdl/Infineon-AN_EICEDRIVER_6ED-AN-v1.3-en.pdf?fileId=db3a304333227b5e01333b17efc86c8f
+	
+	* Rotary Encoder: Alternativen zu AS5145(umständlich um auf Incremental encoder umzustellen) sind AS5035 (8-bit IE) und AS5040 (10-bit IE) und AS5601(12-bit IE und I²C, anderes Package)
+		AS5040 und AS5035 evt. nur in geringen mengen auf RS bzw. farnell erhältlich. auf digikey oder direkt von AMS auch in größeren menegen verfügbar.
+
+Layout
+	Zwischenkreiskondesator (100µF elko) wenn möglich nicht über bauteilen wegen EMV
+	Leitung von versorgung --> FETS --> motor möglichst klein (obviously)
+	leitungen von Gate-Driver (6EDL...) sollten alle möglichst gleich lange sein
+	
+	Verbesserungen:
+		* Eck in der +BATT plane weiter ausfüllen
+		* Versorgungstecker liegend (leichter zugänglich)
+		* stecker zu rotary encoder möglicherweiße auf 12pol erweiter, so daß bestehende rotary encoders ohne "kabelpfusch" verwendet werden können. bzw. rotary encoder platine neu machen.
+		* Bessere Platinen Beschriftung (auch im Silk Layer)
+		* Maximale Eingangspannung des DCDC V6 is 36V --> DCDC V3 verwenden (der hat einen anderen IC).
+		* 3v3 und 12V okay LEDs
+		* GPIO pins (sofern noch freie pins am XMC verfügbar sind).
+		* Vertausche pins von U,V,W high und low
+		* 3V3 referenz zum Processorboard
+		
+Benötigte Bauteile:
+für DCDC V3: 708-2282 | Schotkey Diode DFLS160-7 | 10 Stk.
+
+		

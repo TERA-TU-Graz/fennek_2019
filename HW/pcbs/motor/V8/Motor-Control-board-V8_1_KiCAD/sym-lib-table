@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "Motor_Control-rescue")(type "Legacy")(uri "${KIPRJMOD}/Motor_Control-rescue.lib")(options "")(descr ""))
+  (lib (name "local_symbols")(type "Legacy")(uri "${KIPRJMOD}/local_symbols.lib")(options "")(descr ""))
+)

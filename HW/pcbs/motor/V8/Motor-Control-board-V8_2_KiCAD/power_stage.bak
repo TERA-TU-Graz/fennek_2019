@@ -1,0 +1,390 @@
+EESchema Schematic File Version 4
+LIBS:Motor_Control-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 13
+Title "Motor Control"
+Date "2017-05-19"
+Rev "8.1"
+Comp "TERA TU Graz"
+Comment1 "SEM 2017 final version"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 7900 2150 0    60   Input ~ 0
+u_high
+Text HLabel 7900 2300 0    60   Input ~ 0
+u_low
+Text HLabel 9250 2200 2    60   Output ~ 0
+U
+Text HLabel 9250 4400 2    60   Output ~ 0
+W
+Text HLabel 9250 3300 2    60   Output ~ 0
+V
+Text HLabel 7900 4500 0    60   Input ~ 0
+w_low
+Text HLabel 7900 3400 0    60   Input ~ 0
+v_low
+Text HLabel 7900 4350 0    60   Input ~ 0
+w_high
+Text HLabel 7900 3250 0    60   Input ~ 0
+v_high
+$Sheet
+S 8050 1900 1050 650 
+U 5BFF4242
+F0 "PWR Stage Phase U" 50
+F1 "PWR_Stage_Phase.sch" 50
+F2 "Out" O R 9100 2200 50 
+F3 "com" I L 8050 2450 50 
+F4 "Vbatt" I L 8050 2000 50 
+F5 "L_in" I L 8050 2300 50 
+F6 "H_in" I L 8050 2150 50 
+$EndSheet
+Wire Wire Line
+	7900 2150 8050 2150
+Wire Wire Line
+	7900 2300 8050 2300
+Wire Wire Line
+	9100 2200 9250 2200
+$Sheet
+S 8050 3000 1050 650 
+U 5BFF9857
+F0 "PWR Stage Phase V" 50
+F1 "PWR_Stage_Phase.sch" 50
+F2 "Out" O R 9100 3300 50 
+F3 "com" I L 8050 3550 50 
+F4 "Vbatt" I L 8050 3100 50 
+F5 "L_in" I L 8050 3400 50 
+F6 "H_in" I L 8050 3250 50 
+$EndSheet
+$Sheet
+S 8050 4100 1050 650 
+U 5BFF9A2A
+F0 "PWR Stage Phase W" 50
+F1 "PWR_Stage_Phase.sch" 50
+F2 "Out" O R 9100 4400 50 
+F3 "com" I L 8050 4650 50 
+F4 "Vbatt" I L 8050 4200 50 
+F5 "L_in" I L 8050 4500 50 
+F6 "H_in" I L 8050 4350 50 
+$EndSheet
+Wire Wire Line
+	7900 4350 8050 4350
+Wire Wire Line
+	8050 4500 7900 4500
+Wire Wire Line
+	9100 4400 9250 4400
+Wire Wire Line
+	9100 3300 9250 3300
+Wire Wire Line
+	7900 3250 8050 3250
+Wire Wire Line
+	7900 3400 8050 3400
+Text HLabel 6900 1750 1    60   Input ~ 0
+Vbatt
+Wire Wire Line
+	6900 1750 6900 2000
+Wire Wire Line
+	6900 2000 8050 2000
+Wire Wire Line
+	6900 2000 6900 3100
+Wire Wire Line
+	6900 3100 8050 3100
+Connection ~ 6900 2000
+Wire Wire Line
+	6900 3100 6900 4200
+Wire Wire Line
+	6900 4200 8050 4200
+Connection ~ 6900 3100
+Wire Wire Line
+	7150 5050 7150 4650
+Wire Wire Line
+	7150 4650 8050 4650
+Wire Wire Line
+	7150 4650 7150 3550
+Wire Wire Line
+	7150 3550 8050 3550
+Connection ~ 7150 4650
+Wire Wire Line
+	7150 3550 7150 2450
+Wire Wire Line
+	7150 2450 8050 2450
+Connection ~ 7150 3550
+$Comp
+L power:+12V #PWR?
+U 1 1 5C05AC40
+P 2950 2900
+AR Path="/58543D84/5C05AC40" Ref="#PWR?"  Part="1" 
+AR Path="/58539C2E/5C05AC40" Ref="#PWR0104"  Part="1" 
+F 0 "#PWR0104" H 2950 2750 50  0001 C CNN
+F 1 "+12V" H 2965 3054 25  0000 C CNN
+F 2 "" H 2950 2900 50  0000 C CNN
+F 3 "" H 2950 2900 50  0000 C CNN
+	1    2950 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 3200 3300 3200
+$Comp
+L power:GND #PWR?
+U 1 1 5C05AC47
+P 2950 5200
+AR Path="/58543D84/5C05AC47" Ref="#PWR?"  Part="1" 
+AR Path="/58539C2E/5C05AC47" Ref="#PWR0105"  Part="1" 
+F 0 "#PWR0105" H 2950 4950 50  0001 C CNN
+F 1 "GND" H 2955 5046 25  0000 C CNN
+F 2 "" H 2950 5200 50  0000 C CNN
+F 3 "" H 2950 5200 50  0000 C CNN
+	1    2950 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C05AC4D
+P 3650 4700
+AR Path="/5C05AC4D" Ref="R?"  Part="1" 
+AR Path="/58543D84/5C05AC4D" Ref="R?"  Part="1" 
+AR Path="/58539C2E/5C05AC4D" Ref="R14"  Part="1" 
+F 0 "R14" V 3443 4700 50  0000 C CNN
+F 1 "0R005" V 3534 4700 50  0000 C CNN
+F 2 "tera_rlc:R_2512in" V 3580 4700 50  0001 C CNN
+F 3 "" H 3650 4700 50  0000 C CNN
+	1    3650 4700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2950 4700 3250 4700
+Connection ~ 2950 4700
+Wire Wire Line
+	4100 3900 4100 4700
+Wire Wire Line
+	3800 4700 4100 4700
+$Comp
+L Device:C C?
+U 1 1 5C05AC57
+P 2950 4300
+AR Path="/5C05AC57" Ref="C?"  Part="1" 
+AR Path="/58543D84/5C05AC57" Ref="C?"  Part="1" 
+AR Path="/58539C2E/5C05AC57" Ref="C2"  Part="1" 
+F 0 "C2" H 3065 4346 50  0000 L CNN
+F 1 "10uF" H 3065 4255 50  0000 L CNN
+F 2 "tera_rlc:C_0603in" H 2988 4150 50  0001 C CNN
+F 3 "" H 2950 4300 50  0000 C CNN
+	1    2950 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 4450 2950 4700
+$Comp
+L Device:R R?
+U 1 1 5C05AC5E
+P 2600 3100
+AR Path="/5C05AC5E" Ref="R?"  Part="1" 
+AR Path="/58543D84/5C05AC5E" Ref="R?"  Part="1" 
+AR Path="/58539C2E/5C05AC5E" Ref="R13"  Part="1" 
+F 0 "R13" H 2530 3054 50  0000 R CNN
+F 1 "10k" H 2530 3145 50  0000 R CNN
+F 2 "tera_rlc:R_0603in" V 2530 3100 50  0001 C CNN
+F 3 "" H 2600 3100 50  0000 C CNN
+	1    2600 3100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2600 2900 2600 2950
+Wire Wire Line
+	2150 3400 2600 3400
+Connection ~ 2600 3400
+Text HLabel 2150 3400 0    60   Output ~ 0
+~FAULT
+Text HLabel 2150 3600 0    60   Input ~ 0
+EN
+Wire Wire Line
+	3300 3600 2150 3600
+Wire Wire Line
+	3300 3500 2700 3500
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C05AC6B
+P 2600 2900
+AR Path="/58543D84/5C05AC6B" Ref="#PWR?"  Part="1" 
+AR Path="/58539C2E/5C05AC6B" Ref="#PWR0106"  Part="1" 
+F 0 "#PWR0106" H 2600 2750 50  0001 C CNN
+F 1 "+3V3" H 2615 3054 25  0000 C CNN
+F 2 "" H 2600 2900 50  0000 C CNN
+F 3 "" H 2600 2900 50  0000 C CNN
+	1    2600 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5C05AC71
+P 2500 4300
+AR Path="/5C05AC71" Ref="C?"  Part="1" 
+AR Path="/58543D84/5C05AC71" Ref="C?"  Part="1" 
+AR Path="/58539C2E/5C05AC71" Ref="C1"  Part="1" 
+F 0 "C1" H 2615 4346 50  0000 L CNN
+F 1 "4.7nF" H 2615 4255 50  0000 L CNN
+F 2 "tera_rlc:C_0603in" H 2538 4150 50  0001 C CNN
+F 3 "" H 2500 4300 50  0000 C CNN
+	1    2500 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 3700 2500 3700
+Wire Wire Line
+	2500 3700 2500 4150
+$Comp
+L power:GND #PWR?
+U 1 1 5C05AC79
+P 2500 5200
+AR Path="/58543D84/5C05AC79" Ref="#PWR?"  Part="1" 
+AR Path="/58539C2E/5C05AC79" Ref="#PWR0107"  Part="1" 
+F 0 "#PWR0107" H 2500 4950 50  0001 C CNN
+F 1 "GND" H 2505 5046 25  0000 C CNN
+F 2 "" H 2500 5200 50  0000 C CNN
+F 3 "" H 2500 5200 50  0000 C CNN
+	1    2500 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 5200 2500 4450
+$Comp
+L Device:R R?
+U 1 1 5C05AC81
+P 4700 4450
+AR Path="/5C05AC81" Ref="R?"  Part="1" 
+AR Path="/58543D84/5C05AC81" Ref="R?"  Part="1" 
+AR Path="/58539C2E/5C05AC81" Ref="R16"  Part="1" 
+F 0 "R16" H 4770 4496 50  0000 L CNN
+F 1 "23k" H 4770 4405 50  0000 L CNN
+F 2 "tera_rlc:R_0603in" V 4630 4450 50  0001 C CNN
+F 3 "" H 4700 4450 50  0000 C CNN
+	1    4700 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C05AC87
+P 4700 4200
+AR Path="/58543D84/5C05AC87" Ref="#PWR?"  Part="1" 
+AR Path="/58539C2E/5C05AC87" Ref="#PWR0108"  Part="1" 
+F 0 "#PWR0108" H 4700 4050 50  0001 C CNN
+F 1 "+3V3" H 4715 4354 25  0000 C CNN
+F 2 "" H 4700 4200 50  0000 C CNN
+F 3 "" H 4700 4200 50  0000 C CNN
+	1    4700 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 4300 4700 4200
+Wire Wire Line
+	4700 4600 4700 4700
+$Comp
+L Device:C C?
+U 1 1 5C05AC8F
+P 4700 4950
+AR Path="/5C05AC8F" Ref="C?"  Part="1" 
+AR Path="/58543D84/5C05AC8F" Ref="C?"  Part="1" 
+AR Path="/58539C2E/5C05AC8F" Ref="C6"  Part="1" 
+F 0 "C6" H 4815 4996 50  0000 L CNN
+F 1 "10nF" H 4815 4905 50  0000 L CNN
+F 2 "tera_rlc:C_0603in" H 4738 4800 50  0001 C CNN
+F 3 "" H 4700 4950 50  0000 C CNN
+	1    4700 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C05AC95
+P 4400 4700
+AR Path="/5C05AC95" Ref="R?"  Part="1" 
+AR Path="/58543D84/5C05AC95" Ref="R?"  Part="1" 
+AR Path="/58539C2E/5C05AC95" Ref="R15"  Part="1" 
+F 0 "R15" V 4193 4700 50  0000 C CNN
+F 1 "3k3" V 4284 4700 50  0000 C CNN
+F 2 "tera_rlc:R_0603in" V 4330 4700 50  0001 C CNN
+F 3 "" H 4400 4700 50  0000 C CNN
+	1    4400 4700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4550 4700 4700 4700
+Connection ~ 4700 4700
+Connection ~ 4100 4700
+$Comp
+L power:GND #PWR?
+U 1 1 5C05AC9E
+P 4700 5200
+AR Path="/58543D84/5C05AC9E" Ref="#PWR?"  Part="1" 
+AR Path="/58539C2E/5C05AC9E" Ref="#PWR0109"  Part="1" 
+F 0 "#PWR0109" H 4700 4950 50  0001 C CNN
+F 1 "GND" H 4705 5046 25  0000 C CNN
+F 2 "" H 4700 5200 50  0000 C CNN
+F 3 "" H 4700 5200 50  0000 C CNN
+	1    4700 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 5100 4700 5200
+Text Label 5150 4700 2    60   ~ 0
+I_trip
+Text Label 2700 3500 0    60   ~ 0
+I_trip
+Text Notes 3650 5700 0    20   ~ 0
+http://www.infineon.com/dgdl/Infineon-Tips+and+Tricks+for+RCIN+and+ITRIP-AN-v02_00-EN.pdf?fileId=5546d4624e765da5014eab0d3e245ad7
+Text Notes 3950 5600 0    60   ~ 0
+Infineon PDF to calculate R15 value
+Text Notes 1150 4400 0    60   ~ 0
+T_FLTCLR = 1.9ms * C[nF]\n1.9ms * 4.7 = 8.9ms
+Text Notes 4200 6000 0    60   ~ 0
+I_trip_th = 0.445V\nI_trip = (0.445V - U_Rf) / Rshunt\nI_trip = 20A
+Wire Wire Line
+	2950 2900 2950 3200
+Wire Wire Line
+	3300 3900 3250 3900
+Wire Wire Line
+	3250 3900 3250 4700
+Connection ~ 3250 4700
+Wire Wire Line
+	2950 4700 2950 5200
+Wire Wire Line
+	2600 3400 3300 3400
+Wire Wire Line
+	4700 4700 4700 4800
+Wire Wire Line
+	4700 4700 5150 4700
+Wire Wire Line
+	4100 4700 4250 4700
+Wire Wire Line
+	3250 4700 3500 4700
+$Comp
+L tera_general:6EDL04N02PR_multiUnit IC?
+U 4 1 5C05ACB5
+P 3700 3550
+AR Path="/58543D84/5C05ACB5" Ref="IC?"  Part="4" 
+AR Path="/58539C2E/5C05ACB5" Ref="IC1"  Part="4" 
+F 0 "IC1" H 3675 4187 60  0000 C CNN
+F 1 "6EDL04N02PR_multiUnit" H 3675 4081 60  0000 C CNN
+F 2 "tera_atomic_ic:6EDL04N02PR" H 3700 2900 60  0001 C CNN
+F 3 "http://www.infineon.com/dgdl/Infineon-6EDL04X0XXX-DS-v02_06-EN.pdf?fileId=db3a304336797ff901367c18c18445af" H 3600 3400 60  0001 C CNN
+	4    3700 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 3900 4100 3900
+Connection ~ 4100 3900
+Wire Wire Line
+	4100 3900 4300 3900
+Wire Wire Line
+	2600 3250 2600 3400
+Connection ~ 2950 3200
+Wire Wire Line
+	2950 3200 2950 4150
+Text Label 4300 3900 0    50   ~ 0
+COM
+Text Label 7150 5050 3    50   ~ 0
+COM
+$EndSCHEMATC

@@ -1,0 +1,149 @@
+EESchema Schematic File Version 4
+LIBS:Motor_Control-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 13 17
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L tera_logic:ACPL-827-30CE U2
+U 1 1 5C00E7CC
+P 4300 2700
+AR Path="/5C0085E4/5C00E5A8/5C00E7CC" Ref="U2"  Part="1" 
+AR Path="/5C0085E4/5C013D6A/5C00E7CC" Ref="U2"  Part="2" 
+AR Path="/5C0085E4/5C013FC4/5C00E7CC" Ref="U3"  Part="1" 
+AR Path="/5C0085E4/5C01417C/5C00E7CC" Ref="U3"  Part="2" 
+F 0 "U3" H 4300 3015 50  0000 C CNN
+F 1 "ACPL-827-30CE" H 4300 2924 50  0000 C CNN
+F 2 "tera_atomic_ic:Avago_ACPL-827-30CE" H 4350 2700 50  0001 C CNN
+F 3 "http://www.farnell.com/datasheets/461120.pdf?_ga=2.100448926.1834277794.1543143546-1696907111.1543143546" H 4300 2700 50  0001 C CNN
+	1    4300 2700
+	1    0    0    -1  
+$EndComp
+Text HLabel 4850 2800 2    50   Input ~ 0
+GND_MCU
+Wire Wire Line
+	4850 2800 4600 2800
+Text HLabel 4850 2600 2    50   Output ~ 0
+Signal_MCU
+$Comp
+L Device:R_Small R29
+U 1 1 5C00F5D0
+P 4700 2300
+AR Path="/5C0085E4/5C00E5A8/5C00F5D0" Ref="R29"  Part="1" 
+AR Path="/5C0085E4/5C013D6A/5C00F5D0" Ref="R32"  Part="1" 
+AR Path="/5C0085E4/5C013FC4/5C00F5D0" Ref="R35"  Part="1" 
+AR Path="/5C0085E4/5C01417C/5C00F5D0" Ref="R38"  Part="1" 
+F 0 "R35" H 4759 2346 50  0000 L CNN
+F 1 "10k" H 4759 2255 50  0000 L CNN
+F 2 "tera_rlc:R_0603in" H 4700 2300 50  0001 C CNN
+F 3 "~" H 4700 2300 50  0001 C CNN
+	1    4700 2300
+	1    0    0    -1  
+$EndComp
+Text HLabel 4850 2100 2    50   Input ~ 0
+3V3_MCU
+Wire Wire Line
+	4850 2100 4700 2100
+Wire Wire Line
+	4700 2100 4700 2200
+Wire Wire Line
+	4700 2400 4700 2600
+Connection ~ 4700 2600
+Wire Wire Line
+	4700 2600 4600 2600
+Wire Wire Line
+	4700 2600 4850 2600
+$Comp
+L Device:R_Small R28
+U 1 1 5C00FFCA
+P 3750 2700
+AR Path="/5C0085E4/5C00E5A8/5C00FFCA" Ref="R28"  Part="1" 
+AR Path="/5C0085E4/5C013D6A/5C00FFCA" Ref="R31"  Part="1" 
+AR Path="/5C0085E4/5C013FC4/5C00FFCA" Ref="R34"  Part="1" 
+AR Path="/5C0085E4/5C01417C/5C00FFCA" Ref="R37"  Part="1" 
+F 0 "R34" H 3809 2746 50  0000 L CNN
+F 1 "10k" H 3809 2655 50  0000 L CNN
+F 2 "tera_rlc:R_0603in" H 3750 2700 50  0001 C CNN
+F 3 "~" H 3750 2700 50  0001 C CNN
+	1    3750 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 2600 3950 2600
+Wire Wire Line
+	3950 2600 3950 2550
+Wire Wire Line
+	3950 2550 3750 2550
+Wire Wire Line
+	4000 2800 3950 2800
+Wire Wire Line
+	3950 2800 3950 2850
+Wire Wire Line
+	3950 2850 3750 2850
+Wire Wire Line
+	3750 2800 3750 2850
+Connection ~ 3750 2850
+Wire Wire Line
+	3750 2600 3750 2550
+Connection ~ 3750 2550
+Wire Wire Line
+	3750 2550 3500 2550
+$Comp
+L Device:R_Small R27
+U 1 1 5C010C9E
+P 3250 2550
+AR Path="/5C0085E4/5C00E5A8/5C010C9E" Ref="R27"  Part="1" 
+AR Path="/5C0085E4/5C013D6A/5C010C9E" Ref="R30"  Part="1" 
+AR Path="/5C0085E4/5C013FC4/5C010C9E" Ref="R33"  Part="1" 
+AR Path="/5C0085E4/5C01417C/5C010C9E" Ref="R36"  Part="1" 
+F 0 "R33" V 3054 2550 50  0000 C CNN
+F 1 "1K" V 3145 2550 50  0000 C CNN
+F 2 "tera_rlc:R_0603in" H 3250 2550 50  0001 C CNN
+F 3 "~" H 3250 2550 50  0001 C CNN
+	1    3250 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C24
+U 1 1 5C01145A
+P 3500 2700
+AR Path="/5C0085E4/5C00E5A8/5C01145A" Ref="C24"  Part="1" 
+AR Path="/5C0085E4/5C013D6A/5C01145A" Ref="C25"  Part="1" 
+AR Path="/5C0085E4/5C013FC4/5C01145A" Ref="C26"  Part="1" 
+AR Path="/5C0085E4/5C01417C/5C01145A" Ref="C27"  Part="1" 
+F 0 "C26" H 3350 2750 50  0000 L CNN
+F 1 "100n" H 3250 2650 50  0000 L CNN
+F 2 "tera_rlc:C_0603in" H 3500 2700 50  0001 C CNN
+F 3 "~" H 3500 2700 50  0001 C CNN
+	1    3500 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 2800 3500 2850
+Wire Wire Line
+	3500 2850 3750 2850
+Wire Wire Line
+	3500 2600 3500 2550
+Connection ~ 3500 2550
+Wire Wire Line
+	3500 2550 3350 2550
+Text HLabel 3050 2850 0    50   Input ~ 0
+GND_EXT
+Text HLabel 3050 2550 0    50   Input ~ 0
+Signal_EXT
+Wire Wire Line
+	3050 2550 3150 2550
+Wire Wire Line
+	3050 2850 3500 2850
+Connection ~ 3500 2850
+$EndSCHEMATC

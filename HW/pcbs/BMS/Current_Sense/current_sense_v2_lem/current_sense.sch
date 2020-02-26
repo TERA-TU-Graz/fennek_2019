@@ -1,0 +1,370 @@
+EESchema Schematic File Version 4
+LIBS:current_sense-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp "TERA TU Graz"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L tera_general:HO_25-NP_SP33 IC1
+U 1 1 59360AFD
+P 5000 2800
+F 0 "IC1" H 5000 3347 60  0000 C CNN
+F 1 "HO_25-NP/SP33" H 5000 3241 60  0000 C CNN
+F 2 "tera_atomic_ic:HO_25-NP_SP33" H 5050 2250 60  0001 C CNN
+F 3 "" H 4750 2800 60  0001 C CNN
+F 4 "98-1001" H 5000 2150 60  0001 C CNN "HPN"
+	1    5000 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 2500 4600 2500
+NoConn ~ 5400 2800
+$Comp
+L current_sense-rescue:CONN_01X04 P3
+U 1 1 59360F1D
+P 8200 2850
+F 0 "P3" H 8118 2475 50  0000 C CNN
+F 1 "signal" H 8118 2566 50  0000 C CNN
+F 2 "tera_Connectors_Molex:Molex_PicoBlade_53261-0471_04x1.25mm_Angled" H 8200 2850 50  0001 C CNN
+F 3 "" H 8200 2850 50  0000 C CNN
+F 4 "03-0004" H 8200 2850 60  0001 C CNN "HPN"
+	1    8200 2850
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5550 3000 5550 3100
+Wire Wire Line
+	5550 3000 5400 3000
+Wire Wire Line
+	5400 2600 5950 2600
+Wire Wire Line
+	5400 2900 6300 2900
+$Comp
+L power1:PWR_FLAG #FLG01
+U 1 1 5936111B
+P 7800 2550
+F 0 "#FLG01" H 7800 2645 50  0001 C CNN
+F 1 "PWR_FLAG" H 7800 2774 50  0000 C CNN
+F 2 "" H 7800 2550 50  0000 C CNN
+F 3 "" H 7800 2550 50  0000 C CNN
+	1    7800 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 2550 7800 2700
+$Comp
+L power1:PWR_FLAG #FLG02
+U 1 1 5936115D
+P 7800 3150
+F 0 "#FLG02" H 7800 3245 50  0001 C CNN
+F 1 "PWR_FLAG" H 7800 3373 50  0000 C CNN
+F 2 "" H 7800 3150 50  0000 C CNN
+F 3 "" H 7800 3150 50  0000 C CNN
+	1    7800 3150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7800 3150 7800 3000
+$Comp
+L current_sense-rescue:CONN_01X03 P1
+U 1 1 593612EB
+P 2750 2300
+F 0 "P1" H 2900 2250 50  0000 C CNN
+F 1 "Input" H 2950 2350 50  0000 C CNN
+F 2 "tera_Connectors_Phoenix:PhoenixContact_MSTBVA-G_03x5.08mm_Vertical" H 2750 2300 50  0001 C CNN
+F 3 "" H 2750 2300 50  0000 C CNN
+F 4 "05-1003" H 2750 2300 60  0001 C CNN "HPN"
+	1    2750 2300
+	-1   0    0    1   
+$EndComp
+$Comp
+L current_sense-rescue:CONN_01X03 P2
+U 1 1 5936143F
+P 2750 2800
+F 0 "P2" H 2828 2841 50  0000 L CNN
+F 1 "output" H 2828 2750 50  0000 L CNN
+F 2 "tera_Connectors_Phoenix:PhoenixContact_MSTBA-G_03x5.08mm_Angled" H 2750 2800 50  0001 C CNN
+F 3 "" H 2750 2800 50  0000 C CNN
+F 4 "05-1103" H 2750 2800 60  0001 C CNN "HPN"
+	1    2750 2800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 2300 3050 2300
+Wire Wire Line
+	3050 2300 3050 2400
+Wire Wire Line
+	3050 2400 2950 2400
+Wire Wire Line
+	3050 2700 2950 2700
+Wire Wire Line
+	3050 2800 2950 2800
+Connection ~ 3050 2700
+Connection ~ 3050 2400
+Text Label 3000 2200 0    60   ~ 0
+HV+_In
+Text Label 2950 2900 0    60   ~ 0
+HV+_out
+Text Label 3050 2700 1    60   ~ 0
+HV-
+$Comp
+L power1:GND #PWR03
+U 1 1 59361FC6
+P 5550 3400
+F 0 "#PWR03" H 5550 3150 50  0001 C CNN
+F 1 "GND" H 5555 3227 50  0000 C CNN
+F 2 "" H 5550 3400 50  0000 C CNN
+F 3 "" H 5550 3400 50  0000 C CNN
+	1    5550 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power1:VCC #PWR04
+U 1 1 59362089
+P 6300 2400
+F 0 "#PWR04" H 6300 2250 50  0001 C CNN
+F 1 "VCC" H 6317 2573 50  0000 C CNN
+F 2 "" H 6300 2400 50  0000 C CNN
+F 3 "" H 6300 2400 50  0000 C CNN
+	1    6300 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 2400 6300 2500
+Text Label 6300 2600 0    60   ~ 0
+Signal
+Text Label 6300 2900 0    60   ~ 0
+Standby
+Text Label 8000 2900 2    60   ~ 0
+Signal
+Text Label 8000 2800 2    60   ~ 0
+Standby
+$Comp
+L power1:VCC #PWR05
+U 1 1 5937E95D
+P 7500 2550
+F 0 "#PWR05" H 7500 2400 50  0001 C CNN
+F 1 "VCC" H 7517 2723 50  0000 C CNN
+F 2 "" H 7500 2550 50  0000 C CNN
+F 3 "" H 7500 2550 50  0000 C CNN
+	1    7500 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 2550 7500 2700
+Wire Wire Line
+	7500 2700 7800 2700
+Connection ~ 7800 2700
+Wire Wire Line
+	7500 3000 7800 3000
+$Comp
+L power1:GND #PWR06
+U 1 1 5937EA9C
+P 7500 3050
+F 0 "#PWR06" H 7500 2800 50  0001 C CNN
+F 1 "GND" H 7505 2877 50  0000 C CNN
+F 2 "" H 7500 3050 50  0000 C CNN
+F 3 "" H 7500 3050 50  0000 C CNN
+	1    7500 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 3050 7500 3000
+Connection ~ 7800 3000
+Wire Wire Line
+	6300 2500 6150 2500
+$Comp
+L current_sense-rescue:C_Small C1
+U 1 1 5937EC82
+P 5750 3100
+F 0 "C1" V 5700 2950 50  0000 L CNN
+F 1 "47n" V 5700 3150 50  0000 L CNN
+F 2 "tera_rlc:C_0603in" H 5842 3009 50  0001 L CNN
+F 3 "" H 5750 3100 50  0000 C CNN
+F 4 "50-47n0" H 5750 3100 60  0001 C CNN "HPN"
+	1    5750 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L current_sense-rescue:C_Small C2
+U 1 1 5937EF96
+P 5950 3100
+F 0 "C2" V 5900 2950 50  0000 L CNN
+F 1 "47n" V 5900 3150 50  0000 L CNN
+F 2 "tera_rlc:C_0603in" H 6042 3009 50  0001 L CNN
+F 3 "" H 5950 3100 50  0000 C CNN
+F 4 "50-47n0" H 5950 3100 60  0001 C CNN "HPN"
+	1    5950 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L current_sense-rescue:C_Small C3
+U 1 1 5937EFBE
+P 6150 3100
+F 0 "C3" V 6100 2950 50  0000 L CNN
+F 1 "47n" V 6100 3150 50  0000 L CNN
+F 2 "tera_rlc:C_0603in" H 6242 3009 50  0001 L CNN
+F 3 "" H 6150 3100 50  0000 C CNN
+F 4 "50-47n0" H 6150 3100 60  0001 C CNN "HPN"
+	1    6150 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 3000 5950 2600
+Connection ~ 5950 2600
+Wire Wire Line
+	6150 3000 6150 2500
+Connection ~ 6150 2500
+Wire Wire Line
+	5750 3200 5750 3300
+Wire Wire Line
+	5550 3300 5750 3300
+Connection ~ 5550 3300
+Wire Wire Line
+	5950 3300 5950 3200
+Connection ~ 5750 3300
+Wire Wire Line
+	6150 3300 6150 3200
+Connection ~ 5950 3300
+Wire Wire Line
+	5400 3100 5550 3100
+Connection ~ 5550 3100
+Wire Wire Line
+	5750 3000 5750 2700
+Wire Wire Line
+	5750 2700 5400 2700
+Wire Wire Line
+	3050 2700 3050 2800
+Wire Wire Line
+	7800 2700 8000 2700
+Wire Wire Line
+	7800 3000 8000 3000
+Wire Wire Line
+	5950 2600 6300 2600
+Wire Wire Line
+	6150 2500 5400 2500
+Wire Wire Line
+	5550 3300 5550 3400
+Wire Wire Line
+	5750 3300 5950 3300
+Wire Wire Line
+	5950 3300 6150 3300
+Wire Wire Line
+	5550 3100 5550 3300
+Wire Wire Line
+	4350 2500 4350 2200
+Wire Wire Line
+	4350 3100 4600 3100
+$Comp
+L local_symbols:SolderJumper_2_VerySmall JP3
+U 1 1 5BF0B405
+P 4350 2550
+F 0 "JP3" V 4350 2400 50  0000 L CNN
+F 1 "Full_Range" V 4395 2598 50  0001 L CNN
+F 2 "tera_general:SOLDERJUMPER_2" H 4350 2550 50  0001 C CNN
+F 3 "~" H 4350 2550 50  0001 C CNN
+	1    4350 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L local_symbols:SolderJumper_2_VerySmall JP1
+U 1 1 5BF0DE28
+P 3950 2800
+F 0 "JP1" V 3950 2650 50  0000 L CNN
+F 1 "1/3 Range" V 3995 2848 50  0001 L CNN
+F 2 "tera_general:SOLDERJUMPER_2" H 3950 2800 50  0001 C CNN
+F 3 "~" H 3950 2800 50  0001 C CNN
+	1    3950 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L local_symbols:SolderJumper_2_VerySmall JP4
+U 1 1 5BF0E2C0
+P 4350 2650
+F 0 "JP4" V 4350 2500 50  0000 L CNN
+F 1 "Full_Range" V 4395 2698 50  0001 L CNN
+F 2 "tera_general:SOLDERJUMPER_2" H 4350 2650 50  0001 C CNN
+F 3 "~" H 4350 2650 50  0001 C CNN
+	1    4350 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L local_symbols:SolderJumper_2_VerySmall JP5
+U 1 1 5BF0E741
+P 4350 2950
+F 0 "JP5" V 4350 2800 50  0000 L CNN
+F 1 "Full_Range" V 4395 2998 50  0001 L CNN
+F 2 "tera_general:SOLDERJUMPER_2" H 4350 2950 50  0001 C CNN
+F 3 "~" H 4350 2950 50  0001 C CNN
+	1    4350 2950
+	0    1    1    0   
+$EndComp
+$Comp
+L local_symbols:SolderJumper_2_VerySmall JP6
+U 1 1 5BF0EBF8
+P 4350 3050
+F 0 "JP6" V 4350 2900 50  0000 L CNN
+F 1 "Full_Range" V 4395 3098 50  0001 L CNN
+F 2 "tera_general:SOLDERJUMPER_2" H 4350 3050 50  0001 C CNN
+F 3 "~" H 4350 3050 50  0001 C CNN
+	1    4350 3050
+	0    1    1    0   
+$EndComp
+Connection ~ 4350 2500
+Wire Wire Line
+	4350 2700 4600 2700
+Wire Wire Line
+	4350 2600 4600 2600
+Connection ~ 4350 2600
+Wire Wire Line
+	4600 3000 4350 3000
+Connection ~ 4350 3000
+Wire Wire Line
+	4350 2900 4600 2900
+Wire Wire Line
+	3050 2400 3050 2700
+Wire Wire Line
+	2950 2200 4350 2200
+Wire Wire Line
+	2950 2900 4350 2900
+Connection ~ 4350 2900
+Wire Wire Line
+	4350 2600 3950 2600
+Wire Wire Line
+	3950 2600 3950 2750
+Wire Wire Line
+	3950 2850 3950 3100
+Wire Wire Line
+	3950 3100 4350 3100
+Connection ~ 4350 3100
+$Comp
+L local_symbols:SolderJumper_2_VerySmall JP2
+U 1 1 5BF1DF04
+P 4050 2800
+F 0 "JP2" V 4050 2850 50  0000 L CNN
+F 1 "1/3 Range" V 4095 2848 50  0001 L CNN
+F 2 "tera_general:SOLDERJUMPER_2" H 4050 2800 50  0001 C CNN
+F 3 "~" H 4050 2800 50  0001 C CNN
+	1    4050 2800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4350 2700 4050 2700
+Wire Wire Line
+	4050 2700 4050 2750
+Connection ~ 4350 2700
+Wire Wire Line
+	4050 2850 4050 3000
+Wire Wire Line
+	4050 3000 4350 3000
+$EndSCHEMATC

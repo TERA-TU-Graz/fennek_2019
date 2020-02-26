@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/media/sf_kicad/00_projects/TeraPCBs/projects/fennek_2017_18/BMS/Interlock/Interlock_RelayInterface_v1/Interlock.sch</source>
+    <date>Don 07 Feb 2019 18:28:57 CET</date>
+    <tool>Eeschema 6.0.0-rc1-unknown-c0cd4c0~84~ubuntu16.04.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>BMS fennek interlock relay interface</title>
+        <company>TERA TU Graz</company>
+        <rev>1</rev>
+        <date>2017-05-20</date>
+        <source>Interlock.sch</source>
+        <comment number="1" value="Rene Pöschl"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="P1">
+      <value>IL1</value>
+      <footprint>tera_Connectors_JST:JST_EH_B02B-EH-A_02x2.50mm_Straight</footprint>
+      <fields>
+        <field name="HPN">02-1902</field>
+      </fields>
+      <libsource lib="Interlock-rescue" part="CONN_01X02" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>56DB2FC4</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>1K</value>
+      <footprint>tera_rlc:R_0603in</footprint>
+      <fields>
+        <field name="HPN">11-1K00</field>
+      </fields>
+      <libsource lib="Interlock-rescue" part="R_Small" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>56DB6990</tstamp>
+    </comp>
+    <comp ref="K1">
+      <value>ASSR-1218</value>
+      <footprint>tera_general:SO-4</footprint>
+      <fields>
+        <field name="HPN">96-3001</field>
+      </fields>
+      <libsource lib="relais" part="ASSR-1218" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>56E996D2</tstamp>
+    </comp>
+    <comp ref="P2">
+      <value>Relay_in</value>
+      <footprint>tera_Connectors_JST:JST_XH_B02B-XH-A_02x2.50mm_Straight</footprint>
+      <fields>
+        <field name="HPN">02-1902</field>
+      </fields>
+      <libsource lib="Interlock-rescue" part="CONN_01X02" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59209049</tstamp>
+    </comp>
+    <comp ref="P3">
+      <value>IL2</value>
+      <footprint>tera_Connectors_JST:JST_EH_S03B-EH_03x2.50mm_Angled</footprint>
+      <libsource lib="Interlock-rescue" part="CONN_01X03" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>592091C8</tstamp>
+    </comp>
+    <comp ref="P4">
+      <value>Relay_out</value>
+      <footprint>tera_Connectors_JST:JST_XH_S03B-XH-A_03x2.50mm_Angled</footprint>
+      <libsource lib="Interlock-rescue" part="CONN_01X03" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>59209252</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Interlock-rescue" part="CONN_01X02">
+      <footprints>
+        <fp>Pin_Header_Straight_1X02</fp>
+        <fp>Pin_Header_Angled_1X02</fp>
+        <fp>Socket_Strip_Straight_1X02</fp>
+        <fp>Socket_Strip_Angled_1X02</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Interlock-rescue" part="CONN_01X03">
+      <footprints>
+        <fp>Pin_Header_Straight_1X03</fp>
+        <fp>Pin_Header_Angled_1X03</fp>
+        <fp>Socket_Strip_Straight_1X03</fp>
+        <fp>Socket_Strip_Angled_1X03</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X03</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Interlock-rescue" part="R_Small">
+      <footprints>
+        <fp>Resistor_*</fp>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="relais" part="PhotoMOSFET_1xNO">
+      <aliases>
+        <alias>ASSR-1218</alias>
+      </aliases>
+      <description>Optical solid state relay</description>
+      <fields>
+        <field name="Reference">K</field>
+        <field name="Value">PhotoMOSFET_1xNO</field>
+        <field name="Footprint">tera_general:SO-4</field>
+      </fields>
+      <pins>
+        <pin num="1" name="LED+" type="input"/>
+        <pin num="2" name="LED-" type="input"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Interlock-rescue">
+      <uri>/media/sf_kicad/00_projects/TeraPCBs/projects/fennek_2017_18/BMS/Interlock/Interlock_RelayInterface_v1/Interlock-rescue.lib</uri>
+    </library>
+    <library logical="relais">
+      <uri>/media/sf_kicad/00_projects/TeraPCBs/libs/kicad/tera_symbols/relais.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(K1-Pad3)">
+      <node ref="K1" pin="3"/>
+      <node ref="P2" pin="1"/>
+    </net>
+    <net code="2" name="Net-(K1-Pad2)">
+      <node ref="R1" pin="2"/>
+      <node ref="P1" pin="1"/>
+      <node ref="K1" pin="2"/>
+    </net>
+    <net code="3" name="Net-(P1-Pad2)">
+      <node ref="P3" pin="3"/>
+      <node ref="P1" pin="2"/>
+    </net>
+    <net code="4" name="Net-(K1-Pad4)">
+      <node ref="K1" pin="4"/>
+      <node ref="P4" pin="1"/>
+    </net>
+    <net code="5" name="Net-(P2-Pad2)">
+      <node ref="P4" pin="3"/>
+      <node ref="P2" pin="2"/>
+    </net>
+    <net code="6" name="Net-(P3-Pad2)">
+      <node ref="P3" pin="2"/>
+    </net>
+    <net code="7" name="Net-(P4-Pad2)">
+      <node ref="P4" pin="2"/>
+    </net>
+    <net code="8" name="Net-(K1-Pad1)">
+      <node ref="P3" pin="1"/>
+      <node ref="K1" pin="1"/>
+      <node ref="R1" pin="1"/>
+    </net>
+  </nets>
+</export>

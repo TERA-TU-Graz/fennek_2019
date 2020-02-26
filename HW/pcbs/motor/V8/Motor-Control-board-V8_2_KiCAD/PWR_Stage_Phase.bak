@@ -1,0 +1,311 @@
+EESchema Schematic File Version 4
+LIBS:Motor_Control-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 13
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 6150 3050 2    60   Output ~ 0
+Out
+Text HLabel 5700 3750 3    60   Input ~ 0
+com
+$Comp
+L Device:D D?
+U 1 1 5BFF6F8B
+P 4800 2450
+AR Path="/5BFF6F8B" Ref="D?"  Part="1" 
+AR Path="/58539C2E/5BFF6F8B" Ref="D?"  Part="1" 
+AR Path="/5BFEBC64/5BFF6F8B" Ref="D?"  Part="1" 
+AR Path="/5BFEFF0C/5BFF6F8B" Ref="D?"  Part="1" 
+AR Path="/58539C2E/5BFF4242/5BFF6F8B" Ref="D1"  Part="1" 
+AR Path="/58539C2E/5BFF9857/5BFF6F8B" Ref="D5"  Part="1" 
+AR Path="/58539C2E/5BFF9A2A/5BFF6F8B" Ref="D3"  Part="1" 
+F 0 "D5" H 4800 2666 50  0000 C CNN
+F 1 "D" H 4800 2575 50  0000 C CNN
+F 2 "tera_diodes:SOD-323" H 4800 2450 50  0001 C CNN
+F 3 "" H 4800 2450 50  0000 C CNN
+	1    4800 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5BFF6F91
+P 4800 2700
+AR Path="/5BFF6F91" Ref="R?"  Part="1" 
+AR Path="/58539C2E/5BFF6F91" Ref="R?"  Part="1" 
+AR Path="/5BFEBC64/5BFF6F91" Ref="R?"  Part="1" 
+AR Path="/5BFEFF0C/5BFF6F91" Ref="R?"  Part="1" 
+AR Path="/58539C2E/5BFF4242/5BFF6F91" Ref="R1"  Part="1" 
+AR Path="/58539C2E/5BFF9857/5BFF6F91" Ref="R5"  Part="1" 
+AR Path="/58539C2E/5BFF9A2A/5BFF6F91" Ref="R3"  Part="1" 
+F 0 "R5" V 4900 2700 50  0000 C CNN
+F 1 "180R" V 4700 2700 50  0000 C CNN
+F 2 "tera_rlc:R_0603in" V 4730 2700 50  0001 C CNN
+F 3 "" H 4800 2700 50  0000 C CNN
+	1    4800 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L tera_general:BSC016N06NS Q?
+U 1 1 5BFF6F97
+P 5700 2700
+AR Path="/58539C2E/5BFF6F97" Ref="Q?"  Part="1" 
+AR Path="/5BFEBC64/5BFF6F97" Ref="Q?"  Part="1" 
+AR Path="/5BFEFF0C/5BFF6F97" Ref="Q?"  Part="1" 
+AR Path="/58539C2E/5BFF4242/5BFF6F97" Ref="Q1"  Part="1" 
+AR Path="/58539C2E/5BFF9857/5BFF6F97" Ref="Q5"  Part="1" 
+AR Path="/58539C2E/5BFF9A2A/5BFF6F97" Ref="Q3"  Part="1" 
+F 0 "Q5" H 5787 2796 50  0000 L CNN
+F 1 "BSC016N06NS" H 5787 2705 50  0000 L CNN
+F 2 "infineon:INF-PG-TDSON-8" H 5800 2675 50  0001 L CIN
+F 3 "" H 5800 2825 50  0000 L CNN
+	1    5700 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5BFF6F9D
+P 5200 2450
+AR Path="/5BFF6F9D" Ref="R?"  Part="1" 
+AR Path="/58539C2E/5BFF6F9D" Ref="R?"  Part="1" 
+AR Path="/5BFEBC64/5BFF6F9D" Ref="R?"  Part="1" 
+AR Path="/5BFEFF0C/5BFF6F9D" Ref="R?"  Part="1" 
+AR Path="/58539C2E/5BFF4242/5BFF6F9D" Ref="R7"  Part="1" 
+AR Path="/58539C2E/5BFF9857/5BFF6F9D" Ref="R11"  Part="1" 
+AR Path="/58539C2E/5BFF9A2A/5BFF6F9D" Ref="R9"  Part="1" 
+F 0 "R11" V 5100 2450 50  0000 C CNN
+F 1 "18R" V 5300 2450 50  0000 C CNN
+F 2 "tera_rlc:R_0603in" V 5130 2450 50  0001 C CNN
+F 3 "" H 5200 2450 50  0000 C CNN
+	1    5200 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5BFF6FA3
+P 4800 3200
+AR Path="/5BFF6FA3" Ref="D?"  Part="1" 
+AR Path="/58539C2E/5BFF6FA3" Ref="D?"  Part="1" 
+AR Path="/5BFEBC64/5BFF6FA3" Ref="D?"  Part="1" 
+AR Path="/5BFEFF0C/5BFF6FA3" Ref="D?"  Part="1" 
+AR Path="/58539C2E/5BFF4242/5BFF6FA3" Ref="D2"  Part="1" 
+AR Path="/58539C2E/5BFF9857/5BFF6FA3" Ref="D6"  Part="1" 
+AR Path="/58539C2E/5BFF9A2A/5BFF6FA3" Ref="D4"  Part="1" 
+F 0 "D6" H 4800 3300 50  0000 C CNN
+F 1 "D" H 4800 3100 50  0000 C CNN
+F 2 "tera_diodes:SOD-323" H 4800 3200 50  0001 C CNN
+F 3 "" H 4800 3200 50  0000 C CNN
+	1    4800 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5BFF6FA9
+P 4800 3450
+AR Path="/5BFF6FA9" Ref="R?"  Part="1" 
+AR Path="/58539C2E/5BFF6FA9" Ref="R?"  Part="1" 
+AR Path="/5BFEBC64/5BFF6FA9" Ref="R?"  Part="1" 
+AR Path="/5BFEFF0C/5BFF6FA9" Ref="R?"  Part="1" 
+AR Path="/58539C2E/5BFF4242/5BFF6FA9" Ref="R2"  Part="1" 
+AR Path="/58539C2E/5BFF9857/5BFF6FA9" Ref="R6"  Part="1" 
+AR Path="/58539C2E/5BFF9A2A/5BFF6FA9" Ref="R4"  Part="1" 
+F 0 "R6" V 4700 3450 50  0000 C CNN
+F 1 "20R" V 4600 3450 50  0000 C CNN
+F 2 "tera_rlc:R_0603in" V 4730 3450 50  0001 C CNN
+F 3 "" H 4800 3450 50  0000 C CNN
+	1    4800 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L tera_general:BSC016N06NS Q?
+U 1 1 5BFF6FAF
+P 5700 3450
+AR Path="/58539C2E/5BFF6FAF" Ref="Q?"  Part="1" 
+AR Path="/5BFEBC64/5BFF6FAF" Ref="Q?"  Part="1" 
+AR Path="/5BFEFF0C/5BFF6FAF" Ref="Q?"  Part="1" 
+AR Path="/58539C2E/5BFF4242/5BFF6FAF" Ref="Q2"  Part="1" 
+AR Path="/58539C2E/5BFF9857/5BFF6FAF" Ref="Q6"  Part="1" 
+AR Path="/58539C2E/5BFF9A2A/5BFF6FAF" Ref="Q4"  Part="1" 
+F 0 "Q6" H 5787 3546 50  0000 L CNN
+F 1 "BSC016N06NS" H 5787 3455 50  0000 L CNN
+F 2 "infineon:INF-PG-TDSON-8" H 5800 3425 50  0001 L CIN
+F 3 "" H 5800 3575 50  0000 L CNN
+	1    5700 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5BFF6FB5
+P 5200 3200
+AR Path="/5BFF6FB5" Ref="R?"  Part="1" 
+AR Path="/58539C2E/5BFF6FB5" Ref="R?"  Part="1" 
+AR Path="/5BFEBC64/5BFF6FB5" Ref="R?"  Part="1" 
+AR Path="/5BFEFF0C/5BFF6FB5" Ref="R?"  Part="1" 
+AR Path="/58539C2E/5BFF4242/5BFF6FB5" Ref="R8"  Part="1" 
+AR Path="/58539C2E/5BFF9857/5BFF6FB5" Ref="R12"  Part="1" 
+AR Path="/58539C2E/5BFF9A2A/5BFF6FB5" Ref="R10"  Part="1" 
+F 0 "R12" V 5100 3200 50  0000 C CNN
+F 1 "0R" V 5300 3200 50  0000 C CNN
+F 2 "tera_rlc:R_0603in" V 5130 3200 50  0001 C CNN
+F 3 "" H 5200 3200 50  0000 C CNN
+	1    5200 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5700 3050 6150 3050
+Wire Wire Line
+	5700 3550 5700 3750
+Connection ~ 4600 3450
+Wire Wire Line
+	4600 3200 4600 3450
+Wire Wire Line
+	4650 3200 4600 3200
+Wire Wire Line
+	5400 3200 5400 3450
+Wire Wire Line
+	4950 3200 5050 3200
+Wire Wire Line
+	5500 3450 5400 3450
+Wire Wire Line
+	5700 2200 5700 2500
+Connection ~ 4600 2700
+Wire Wire Line
+	4600 2450 4600 2700
+Wire Wire Line
+	4650 2450 4600 2450
+Wire Wire Line
+	5400 2450 5400 2700
+Wire Wire Line
+	4950 2450 5050 2450
+Wire Wire Line
+	4600 3450 4650 3450
+Wire Wire Line
+	4600 2700 4650 2700
+Wire Wire Line
+	5700 2800 5700 3050
+Wire Wire Line
+	5400 2700 5500 2700
+Wire Wire Line
+	4950 2700 5400 2700
+Wire Wire Line
+	5400 2450 5350 2450
+Connection ~ 5400 2700
+Wire Wire Line
+	5400 3200 5350 3200
+Wire Wire Line
+	4950 3450 5400 3450
+Connection ~ 5400 3450
+Text HLabel 5700 2200 1    60   Input ~ 0
+Vbatt
+Text Notes 4800 1750 0    50   ~ 0
+Resistor Values:\nFennek 2017/18: Rdischarge = 0; Rcharge = 20\nEvalboard: Rdischarge = 18; Rcharge = 180
+Wire Wire Line
+	5700 3050 5700 3250
+Connection ~ 5700 3050
+$Comp
+L tera_general:6EDL04N02PR_multiUnit IC?
+U 3 1 5C0406ED
+P 2600 2900
+AR Path="/58543D84/5C0406ED" Ref="IC?"  Part="1" 
+AR Path="/58539C2E/5BFF4242/5C0406ED" Ref="IC1"  Part="1" 
+AR Path="/58539C2E/5BFF9857/5C0406ED" Ref="IC1"  Part="3" 
+AR Path="/58539C2E/5BFF9A2A/5C0406ED" Ref="IC1"  Part="2" 
+F 0 "IC1" H 2575 3337 60  0000 C CNN
+F 1 "6EDL04N02PR_multiUnit" H 2575 3231 60  0000 C CNN
+F 2 "tera_atomic_ic:6EDL04N02PR" H 2600 2250 60  0001 C CNN
+F 3 "http://www.infineon.com/dgdl/Infineon-6EDL04X0XXX-DS-v02_06-EN.pdf?fileId=db3a304336797ff901367c18c18445af" H 2500 2750 60  0001 C CNN
+	3    2600 2900
+	1    0    0    -1  
+$EndComp
+Text Notes 2550 3550 0    20   ~ 0
+http://www.infineon.com/dgdl/Infineon-AN_EICEDRIVER_6ED-AN-v1.3-en.pdf?fileId=db3a304333227b5e01333b17efc86c8f
+Text Notes 2550 3500 0    60   ~ 0
+C chosen such\nas dVB <0.33V
+Connection ~ 3050 3050
+Wire Wire Line
+	3050 3150 3050 3050
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5C0406F8
+P 3050 3150
+AR Path="/58543D84/5C0406F8" Ref="#FLG?"  Part="1" 
+AR Path="/58539C2E/5BFF4242/5C0406F8" Ref="#FLG0101"  Part="1" 
+AR Path="/58539C2E/5BFF9857/5C0406F8" Ref="#FLG0103"  Part="1" 
+AR Path="/58539C2E/5BFF9A2A/5C0406F8" Ref="#FLG0105"  Part="1" 
+F 0 "#FLG0103" H 3050 3245 50  0001 C CNN
+F 1 "PWR_FLAG" H 3000 3250 10  0000 L CNN
+F 2 "" H 3050 3150 50  0000 C CNN
+F 3 "" H 3050 3150 50  0000 C CNN
+	1    3050 3150
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5C0406FE
+P 3150 2750
+AR Path="/58543D84/5C0406FE" Ref="#FLG?"  Part="1" 
+AR Path="/58539C2E/5BFF4242/5C0406FE" Ref="#FLG0102"  Part="1" 
+AR Path="/58539C2E/5BFF9857/5C0406FE" Ref="#FLG0104"  Part="1" 
+AR Path="/58539C2E/5BFF9A2A/5C0406FE" Ref="#FLG0106"  Part="1" 
+F 0 "#FLG0104" H 3150 2845 50  0001 C CNN
+F 1 "PWR_FLAG" H 3100 2850 10  0000 L CNN
+F 2 "" H 3150 2750 50  0000 C CNN
+F 3 "" H 3150 2750 50  0000 C CNN
+	1    3150 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 2850 2950 2850
+Wire Wire Line
+	3750 2950 2950 2950
+Wire Wire Line
+	2950 3050 3050 3050
+Wire Wire Line
+	3050 2750 3150 2750
+Wire Wire Line
+	2950 2750 3050 2750
+Connection ~ 3050 2750
+$Comp
+L Device:C C?
+U 1 1 5C04070F
+P 3050 2900
+AR Path="/5C04070F" Ref="C?"  Part="1" 
+AR Path="/58543D84/5C04070F" Ref="C?"  Part="1" 
+AR Path="/58539C2E/5BFF4242/5C04070F" Ref="C3"  Part="1" 
+AR Path="/58539C2E/5BFF9857/5C04070F" Ref="C5"  Part="1" 
+AR Path="/58539C2E/5BFF9A2A/5C04070F" Ref="C4"  Part="1" 
+F 0 "C5" H 3100 3000 50  0000 L CNN
+F 1 "330nF" H 3100 2800 50  0000 L CNN
+F 2 "tera_rlc:C_0603in" H 3088 2750 50  0001 C CNN
+F 3 "" H 3050 2900 50  0000 C CNN
+	1    3050 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 2850 2000 2850
+Wire Wire Line
+	2000 2950 2200 2950
+Text HLabel 2000 2950 0    60   Input ~ 0
+L_in
+Text HLabel 2000 2850 0    60   Input ~ 0
+H_in
+Wire Wire Line
+	3750 2700 4600 2700
+Wire Wire Line
+	3750 3450 4600 3450
+Wire Wire Line
+	3750 2850 3750 2700
+Wire Wire Line
+	3750 2950 3750 3450
+Wire Wire Line
+	3050 3050 5700 3050
+$EndSCHEMATC

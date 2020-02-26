@@ -1,0 +1,571 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:ft232rl
+LIBS:relais
+LIBS:Supply
+LIBS:tera_connectors
+LIBS:tera_emc_prodection
+LIBS:tera_general
+LIBS:tera_logic
+LIBS:tera_processors
+LIBS:tera_switches
+LIBS:local_symbols
+LIBS:Motor_Control-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_01X03 P3
+U 1 1 5848B761
+P 10550 2800
+F 0 "P3" H 10628 2841 50  0000 L CNN
+F 1 "CONN_01X03" H 10628 2750 50  0000 L CNN
+F 2 "tera_Connectors_Phoenix:PhoenixContact_MSTBA-G_03x5.08mm_Angled" H 10550 2800 50  0001 C CNN
+F 3 "" H 10550 2800 50  0000 C CNN
+	1    10550 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P2
+U 1 1 584959EB
+P 1950 5750
+F 0 "P2" H 2028 5791 50  0000 L CNN
+F 1 "CONN_01X02" H 2028 5700 50  0000 L CNN
+F 2 "tera_Connectors_Phoenix:MSTBV_2.5_2-GF-5.08mm" H 1950 5750 50  0001 C CNN
+F 3 "" H 1950 5750 50  0000 C CNN
+	1    1950 5750
+	-1   0    0    1   
+$EndComp
+$Comp
+L +BATT #PWR01
+U 1 1 58496689
+P 2250 5550
+F 0 "#PWR01" H 2250 5400 50  0001 C CNN
+F 1 "+BATT" H 2250 5700 26  0000 C CNN
+F 2 "" H 2250 5550 50  0000 C CNN
+F 3 "" H 2250 5550 50  0000 C CNN
+	1    2250 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG02
+U 1 1 58496721
+P 2600 5550
+F 0 "#FLG02" H 2600 5645 50  0001 C CNN
+F 1 "PWR_FLAG" H 2600 5650 10  0000 C CNN
+F 2 "" H 2600 5550 50  0000 C CNN
+F 3 "" H 2600 5550 50  0000 C CNN
+	1    2600 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG03
+U 1 1 58496914
+P 2600 6050
+F 0 "#FLG03" H 2600 6145 50  0001 C CNN
+F 1 "PWR_FLAG" H 2600 6150 10  0000 C CNN
+F 2 "" H 2600 6050 50  0000 C CNN
+F 3 "" H 2600 6050 50  0000 C CNN
+	1    2600 6050
+	-1   0    0    1   
+$EndComp
+$Comp
+L +BATT #PWR04
+U 1 1 584BDC97
+P 8950 5250
+F 0 "#PWR04" H 8950 5100 50  0001 C CNN
+F 1 "+BATT" H 8950 5400 26  0000 C CNN
+F 2 "" H 8950 5250 50  0000 C CNN
+F 3 "" H 8950 5250 50  0000 C CNN
+	1    8950 5250
+	1    0    0    -1  
+$EndComp
+Text Notes 8150 5000 0    60   ~ 0
+Power Supply for\n1/2 H bridge
+$Comp
+L CP C1
+U 1 1 584B4CDA
+P 2600 5800
+F 0 "C1" H 2718 5846 50  0000 L CNN
+F 1 "100uF" H 2718 5755 50  0000 L CNN
+F 2 "tera_rlc:ElkoC-12.5x20mm-horizontal" H 2638 5650 50  0001 C CNN
+F 3 "" H 2600 5800 50  0000 C CNN
+	1    2600 5800
+	1    0    0    -1  
+$EndComp
+Text Notes 1550 5550 0    60   ~ 0
+Power Input
+$Comp
+L DCDC_Stepdown_v6 PS2
+U 1 1 584D31DF
+P 9550 5350
+F 0 "PS2" H 9550 5615 50  0000 C CNN
+F 1 "DCDC_Stepdown_v6" H 9550 5524 50  0000 C CNN
+F 2 "Boards_Tera:DCDC_Stepdown_v6" H 9550 5550 60  0001 C CNN
+F 3 "" V 9500 5450 60  0000 C CNN
+	1    9550 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_Zener D1
+U 1 1 584D6559
+P 2250 5800
+F 0 "D1" V 2204 5879 50  0000 L CNN
+F 1 "58V" V 2295 5879 50  0000 L CNN
+F 2 "tera_diodes:DO-214AA" H 2250 5800 50  0001 C CNN
+F 3 "" H 2250 5800 50  0000 C CNN
+	1    2250 5800
+	0    1    1    0   
+$EndComp
+$Comp
+L +BATT #PWR05
+U 1 1 5853F653
+P 7150 5250
+F 0 "#PWR05" H 7150 5100 50  0001 C CNN
+F 1 "+BATT" H 7150 5400 26  0000 C CNN
+F 2 "" H 7150 5250 50  0000 C CNN
+F 3 "" H 7150 5250 50  0000 C CNN
+	1    7150 5250
+	1    0    0    -1  
+$EndComp
+Text Notes 6600 5000 0    60   ~ 0
+Power Supply for\n1/2 H bridge
+$Comp
+L DCDC_Stepdown_v6 PS1
+U 1 1 5853F666
+P 7750 5350
+F 0 "PS1" H 7750 5615 50  0000 C CNN
+F 1 "DCDC_Stepdown_v6" H 7750 5524 50  0000 C CNN
+F 2 "Boards_Tera:DCDC_Stepdown_v6" H 7750 5550 60  0001 C CNN
+F 3 "" V 7700 5450 60  0000 C CNN
+	1    7750 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR06
+U 1 1 5853F6DB
+P 8300 5250
+F 0 "#PWR06" H 8300 5100 50  0001 C CNN
+F 1 "+3V3" H 8315 5404 25  0000 C CNN
+F 2 "" H 8300 5250 50  0000 C CNN
+F 3 "" H 8300 5250 50  0000 C CNN
+	1    8300 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 58540D20
+P 10100 5550
+F 0 "#PWR07" H 10100 5300 50  0001 C CNN
+F 1 "GND" H 10105 5396 25  0000 C CNN
+F 2 "" H 10100 5550 50  0000 C CNN
+F 3 "" H 10100 5550 50  0000 C CNN
+	1    10100 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR08
+U 1 1 58540D9D
+P 8950 5550
+F 0 "#PWR08" H 8950 5300 50  0001 C CNN
+F 1 "GND" H 8955 5396 25  0000 C CNN
+F 2 "" H 8950 5550 50  0000 C CNN
+F 3 "" H 8950 5550 50  0000 C CNN
+	1    8950 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR09
+U 1 1 58540E1A
+P 8300 5550
+F 0 "#PWR09" H 8300 5300 50  0001 C CNN
+F 1 "GND" H 8305 5396 25  0000 C CNN
+F 2 "" H 8300 5550 50  0000 C CNN
+F 3 "" H 8300 5550 50  0000 C CNN
+	1    8300 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR010
+U 1 1 58540E97
+P 7150 5550
+F 0 "#PWR010" H 7150 5300 50  0001 C CNN
+F 1 "GND" H 7155 5396 25  0000 C CNN
+F 2 "" H 7150 5550 50  0000 C CNN
+F 3 "" H 7150 5550 50  0000 C CNN
+	1    7150 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR011
+U 1 1 58540F14
+P 2250 6050
+F 0 "#PWR011" H 2250 5800 50  0001 C CNN
+F 1 "GND" H 2255 5896 25  0000 C CNN
+F 2 "" H 2250 6050 50  0000 C CNN
+F 3 "" H 2250 6050 50  0000 C CNN
+	1    2250 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR012
+U 1 1 58544B38
+P 10100 5250
+F 0 "#PWR012" H 10100 5100 50  0001 C CNN
+F 1 "+12V" H 10100 5400 26  0000 C CNN
+F 2 "" H 10100 5250 50  0000 C CNN
+F 3 "" H 10100 5250 50  0000 C CNN
+	1    10100 5250
+	1    0    0    -1  
+$EndComp
+Text Label 10150 3200 2    60   ~ 0
+current_u_amp
+Text Label 10150 3300 2    60   ~ 0
+current_w_amp
+$Sheet
+S 6800 2000 1050 1550
+U 58539C2E
+F0 "Power Stage" 60
+F1 "power_stage.sch" 60
+F2 "u_high" I L 6800 2150 60 
+F3 "v_high" I L 6800 2600 60 
+F4 "w_high" I L 6800 3050 60 
+F5 "u_low" I L 6800 2250 60 
+F6 "v_low" I L 6800 2700 60 
+F7 "w_low" I L 6800 3150 60 
+F8 "U" I R 7850 2650 60 
+F9 "V" I R 7850 2750 60 
+F10 "W" I R 7850 2850 60 
+F11 "com" I L 6800 3450 60 
+$EndSheet
+Text Label 8150 2650 0    60   ~ 0
+U
+Text Label 8150 2750 0    60   ~ 0
+V
+Text Label 8150 2850 0    60   ~ 0
+W
+$Sheet
+S 5400 1900 1000 1650
+U 58543D84
+F0 "bridge driver" 60
+F1 "bridge_driver.sch" 60
+F2 "HIN_U" I L 5400 2150 60 
+F3 "LIN_U" I L 5400 2250 60 
+F4 "HIN_V" I L 5400 2400 60 
+F5 "LIN_V" I L 5400 2500 60 
+F6 "HIN_W" I L 5400 2650 60 
+F7 "LIN_W" I L 5400 2750 60 
+F8 "~FAULT" I L 5400 3050 60 
+F9 "EN" I L 5400 3150 60 
+F10 "HOUT_U" I R 6400 2150 60 
+F11 "LOUT_U" I R 6400 2250 60 
+F12 "HOUT_V" I R 6400 2600 60 
+F13 "LOUT_V" I R 6400 2700 60 
+F14 "HOUT_W" I R 6400 3050 60 
+F15 "LOUT_W" I R 6400 3150 60 
+F16 "U" I R 6400 2350 60 
+F17 "V" I R 6400 2800 60 
+F18 "W" I R 6400 3250 60 
+F19 "COM" I R 6400 3450 60 
+$EndSheet
+Text Label 6600 2350 2    60   ~ 0
+U
+Text Label 6600 2800 2    60   ~ 0
+V
+Text Label 6600 3250 2    60   ~ 0
+W
+$Sheet
+S 3650 1600 1250 2250
+U 585543FF
+F0 "XMC4x00" 60
+F1 "prozessor.sch" 60
+F2 "current_u" I L 3650 1750 60 
+F3 "current_w" I L 3650 1850 60 
+F4 "voltage_u" I L 3650 2000 60 
+F5 "voltage_v" I L 3650 2100 60 
+F6 "voltage_w" I L 3650 2200 60 
+F7 "u_high" I R 4900 2150 60 
+F8 "u_low" I R 4900 2250 60 
+F9 "v_high" I R 4900 2400 60 
+F10 "v_low" I R 4900 2500 60 
+F11 "w_high" I R 4900 2650 60 
+F12 "w_low" I R 4900 2750 60 
+F13 "rotary_CLK" I L 3650 3300 60 
+F14 "rotary_DO" I L 3650 3500 60 
+F15 "rotary_CSn" I L 3650 3200 60 
+F16 "rotary_DI" I L 3650 3400 60 
+F17 "~FAULT" I R 4900 3050 60 
+F18 "EN" I R 4900 3150 60 
+F19 "ENC_B" I L 3650 2800 60 
+F20 "ENC_A" I L 3650 2900 60 
+F21 "MAGDEC" I L 3650 3000 60 
+F22 "MAGINC" I L 3650 3100 60 
+F23 "LEM_standby" I L 3650 2450 60 
+$EndSheet
+Text Label 10150 3500 2    60   ~ 0
+voltage_u
+Text Label 10150 3600 2    60   ~ 0
+voltage_v
+Text Label 10150 3700 2    60   ~ 0
+voltage_w
+$Comp
+L GND #PWR013
+U 1 1 5856DF31
+P 2100 3700
+F 0 "#PWR013" H 2100 3450 50  0001 C CNN
+F 1 "GND" H 2105 3546 25  0000 C CNN
+F 2 "" H 2100 3700 50  0000 C CNN
+F 3 "" H 2100 3700 50  0000 C CNN
+	1    2100 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR014
+U 1 1 5856F02C
+P 2150 2550
+F 0 "#PWR014" H 2150 2400 50  0001 C CNN
+F 1 "+3V3" H 2165 2704 25  0000 C CNN
+F 2 "" H 2150 2550 50  0000 C CNN
+F 3 "" H 2150 2550 50  0000 C CNN
+	1    2150 2550
+	1    0    0    -1  
+$EndComp
+Text Label 2950 2000 0    60   ~ 0
+voltage_u
+Text Label 2950 2100 0    60   ~ 0
+voltage_v
+Text Label 2950 2200 0    60   ~ 0
+voltage_w
+Text Label 2950 1750 0    60   ~ 0
+current_u_amp
+Text Label 2950 1850 0    60   ~ 0
+current_w_amp
+$Comp
+L CONN_01X10 P1
+U 1 1 58580CC9
+P 1800 3150
+F 0 "P1" H 1719 2475 50  0000 C CNN
+F 1 "CONN_01X10" H 1719 2566 50  0000 C CNN
+F 2 "tera_Connectors_Molex:Molex_PicoBlade_53261-1071_10x1.25mm_Angled" H 1800 3150 50  0001 C CNN
+F 3 "" H 1800 3150 50  0000 C CNN
+	1    1800 3150
+	-1   0    0    1   
+$EndComp
+Text Label 10150 3950 2    60   ~ 0
+LEM_standby
+Text Label 2950 2450 0    60   ~ 0
+LEM_standby
+$Sheet
+S 8400 2550 1050 1800
+U 5852F1C7
+F0 "U/I sense" 60
+F1 "current_amp.sch" 60
+F2 "current_u_amp" I R 9450 3200 60 
+F3 "U_in" I L 8400 2650 60 
+F4 "U_out" I R 9450 2650 60 
+F5 "W_out" I R 9450 2950 60 
+F6 "W_in" I L 8400 2850 60 
+F7 "current_w_amp" I R 9450 3300 60 
+F8 "V_in" I L 8400 2750 60 
+F9 "V_out" I R 9450 2800 60 
+F10 "voltage_w" I R 9450 3700 60 
+F11 "voltage_v" I R 9450 3600 60 
+F12 "voltage_u" I R 9450 3500 60 
+F13 "LEM_standby" I R 9450 3950 60 
+$EndSheet
+Wire Wire Line
+	2150 5600 2600 5600
+Wire Wire Line
+	2150 6000 2600 6000
+Wire Wire Line
+	8950 5250 8950 5350
+Wire Wire Line
+	8950 5350 9150 5350
+Wire Wire Line
+	8950 5550 8950 5450
+Wire Wire Line
+	8950 5450 9150 5450
+Wire Wire Line
+	10100 5250 10100 5350
+Wire Wire Line
+	10100 5350 9950 5350
+Wire Wire Line
+	2600 5550 2600 5650
+Wire Wire Line
+	2600 5950 2600 6050
+Connection ~ 2600 5600
+Connection ~ 2600 6000
+Connection ~ 2250 6000
+Connection ~ 2250 5600
+Wire Wire Line
+	10100 5550 10100 5450
+Wire Wire Line
+	10100 5450 9950 5450
+Wire Wire Line
+	2250 5550 2250 5650
+Wire Wire Line
+	2250 5950 2250 6050
+Wire Wire Line
+	2150 6000 2150 5800
+Wire Wire Line
+	2150 5600 2150 5700
+Wire Wire Line
+	7150 5250 7150 5350
+Wire Wire Line
+	7150 5350 7350 5350
+Wire Wire Line
+	7150 5550 7150 5450
+Wire Wire Line
+	7150 5450 7350 5450
+Wire Wire Line
+	8300 5250 8300 5350
+Wire Wire Line
+	8300 5350 8150 5350
+Wire Wire Line
+	8300 5550 8300 5450
+Wire Wire Line
+	8300 5450 8150 5450
+Wire Wire Line
+	9450 3200 10150 3200
+Wire Wire Line
+	9450 3300 10150 3300
+Wire Wire Line
+	7850 2650 8400 2650
+Wire Wire Line
+	7850 2750 8400 2750
+Wire Wire Line
+	7850 2850 8400 2850
+Wire Wire Line
+	6400 3450 6800 3450
+Wire Wire Line
+	6400 3150 6800 3150
+Wire Wire Line
+	6400 3050 6800 3050
+Wire Wire Line
+	6400 2700 6800 2700
+Wire Wire Line
+	6400 2600 6800 2600
+Wire Wire Line
+	6400 2250 6800 2250
+Wire Wire Line
+	6400 2150 6800 2150
+Wire Wire Line
+	6400 2350 6600 2350
+Wire Wire Line
+	6400 2800 6600 2800
+Wire Wire Line
+	6400 3250 6600 3250
+Wire Wire Line
+	9450 3500 10150 3500
+Wire Wire Line
+	9450 3600 10150 3600
+Wire Wire Line
+	9450 3700 10150 3700
+Wire Wire Line
+	4900 2750 5400 2750
+Wire Wire Line
+	5400 2650 4900 2650
+Wire Wire Line
+	4900 2500 5400 2500
+Wire Wire Line
+	5400 2400 4900 2400
+Wire Wire Line
+	4900 2250 5400 2250
+Wire Wire Line
+	4900 2150 5400 2150
+Wire Wire Line
+	5400 3050 4900 3050
+Wire Wire Line
+	5400 3150 4900 3150
+Wire Wire Line
+	2100 3700 2100 3600
+Wire Wire Line
+	2100 3600 2000 3600
+Wire Wire Line
+	2000 2700 2150 2700
+Wire Wire Line
+	2150 2700 2150 2550
+Wire Wire Line
+	3650 3500 2000 3500
+Wire Wire Line
+	3650 3400 2000 3400
+Wire Wire Line
+	3650 3300 2000 3300
+Wire Wire Line
+	3650 3200 2000 3200
+Wire Wire Line
+	2950 1750 3650 1750
+Wire Wire Line
+	2950 1850 3650 1850
+Wire Wire Line
+	2950 2000 3650 2000
+Wire Wire Line
+	2950 2100 3650 2100
+Wire Wire Line
+	2950 2200 3650 2200
+Wire Wire Line
+	3650 3100 2000 3100
+Wire Wire Line
+	2000 3000 3650 3000
+Wire Wire Line
+	3650 2900 2000 2900
+Wire Wire Line
+	2000 2800 3650 2800
+Wire Wire Line
+	9450 3950 10150 3950
+Wire Wire Line
+	3650 2450 2950 2450
+Wire Wire Line
+	9450 2800 10350 2800
+Wire Wire Line
+	10350 2700 9900 2700
+Wire Wire Line
+	9900 2700 9900 2950
+Wire Wire Line
+	9900 2950 9450 2950
+Wire Wire Line
+	9450 2650 10000 2650
+Wire Wire Line
+	10000 2650 10000 2900
+Wire Wire Line
+	10000 2900 10350 2900
+$EndSCHEMATC

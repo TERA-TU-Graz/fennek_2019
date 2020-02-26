@@ -1,0 +1,886 @@
+EESchema Schematic File Version 2
+LIBS:local_symbols
+LIBS:74xgxx
+LIBS:74xx
+LIBS:ac-dc
+LIBS:actel
+LIBS:adc-dac
+LIBS:allegro
+LIBS:Altera
+LIBS:analog_devices
+LIBS:analog_switches
+LIBS:atmel
+LIBS:audio
+LIBS:battery_management
+LIBS:bbd
+LIBS:bosch
+LIBS:brooktre
+LIBS:cmos4000
+LIBS:cmos_ieee
+LIBS:conn
+LIBS:contrib
+LIBS:cypress
+LIBS:dc-dc
+LIBS:device
+LIBS:digital-audio
+LIBS:diode
+LIBS:display
+LIBS:dsp
+LIBS:elec-unifil
+LIBS:ESD_Protection
+LIBS:ftdi
+LIBS:gennum
+LIBS:graphic
+LIBS:hc11
+LIBS:intel
+LIBS:interface
+LIBS:ir
+LIBS:Lattice
+LIBS:leds
+LIBS:linear
+LIBS:logo
+LIBS:maxim
+LIBS:mechanical
+LIBS:memory
+LIBS:microchip
+LIBS:microchip_dspic33dsc
+LIBS:microchip_pic10mcu
+LIBS:microchip_pic12mcu
+LIBS:microchip_pic16mcu
+LIBS:microchip_pic18mcu
+LIBS:microchip_pic24mcu
+LIBS:microchip_pic32mcu
+LIBS:microcontrollers
+LIBS:modules
+LIBS:motor_drivers
+LIBS:motorola
+LIBS:motors
+LIBS:msp430
+LIBS:nordicsemi
+LIBS:nxp
+LIBS:nxp_armmcu
+LIBS:onsemi
+LIBS:opto
+LIBS:Oscillators
+LIBS:philips
+LIBS:power
+LIBS:powerint
+LIBS:Power_Management
+LIBS:pspice
+LIBS:references
+LIBS:regul
+LIBS:relays
+LIBS:rfcom
+LIBS:sensors
+LIBS:silabs
+LIBS:siliconi
+LIBS:stm8
+LIBS:stm32
+LIBS:supertex
+LIBS:switches
+LIBS:texas
+LIBS:transf
+LIBS:transistors
+LIBS:triac_thyristor
+LIBS:ttl_ieee
+LIBS:valves
+LIBS:video
+LIBS:wiznet
+LIBS:Worldsemi
+LIBS:Xicor
+LIBS:xilinx
+LIBS:zetex
+LIBS:Zilog
+LIBS:ft232rl
+LIBS:relais
+LIBS:Supply
+LIBS:tera_connectors
+LIBS:tera_emc_prodection
+LIBS:tera_general
+LIBS:tera_logic
+LIBS:tera_processors
+LIBS:tera_sensoric
+LIBS:tera_switches
+LIBS:Motor_Control-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 6
+Title "Motor Control"
+Date "2017-05-19"
+Rev "8.1"
+Comp "TERA TU Graz"
+Comment1 "SEM 2017 final version"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LMV342 IC4
+U 1 1 5852F230
+P 7500 3350
+F 0 "IC4" H 7500 3717 50  0000 C CNN
+F 1 "LMV342" H 7500 3626 50  0000 C CNN
+F 2 "tera_atomic_ic:LMV342" H 7500 3100 50  0001 L CNN
+F 3 "" H 7500 3000 50  0001 L CNN
+	1    7500 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C16
+U 1 1 5852F610
+P 6200 3650
+F 0 "C16" H 6315 3696 50  0000 L CNN
+F 1 "no.Ass." H 6315 3605 50  0000 L CNN
+F 2 "tera_rlc:C_0603in" H 6238 3500 50  0001 C CNN
+F 3 "" H 6200 3650 50  0000 C CNN
+	1    6200 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR022
+U 1 1 5852F935
+P 6200 4000
+F 0 "#PWR022" H 6200 3750 50  0001 C CNN
+F 1 "GND" H 6205 3846 25  0000 C CNN
+F 2 "" H 6200 4000 50  0000 C CNN
+F 3 "" H 6200 4000 50  0000 C CNN
+	1    6200 4000
+	1    0    0    -1  
+$EndComp
+Text HLabel 8650 1350 2    60   Input ~ 0
+current_u_amp
+$Comp
+L R R25
+U 1 1 5852FB3A
+P 7400 2800
+F 0 "R25" V 7193 2800 50  0000 C CNN
+F 1 "0R" V 7284 2800 50  0000 C CNN
+F 2 "tera_rlc:R_0603in" V 7330 2800 50  0001 C CNN
+F 3 "" H 7400 2800 50  0000 C CNN
+	1    7400 2800
+	0    1    1    0   
+$EndComp
+Text HLabel 1450 1750 0    60   Input ~ 0
+U_in
+Text HLabel 2800 1150 0    60   Input ~ 0
+U_out
+$Comp
+L C C18
+U 1 1 585228EB
+P 5850 5400
+F 0 "C18" H 5965 5446 50  0000 L CNN
+F 1 "100nF" H 5965 5355 50  0000 L CNN
+F 2 "tera_rlc:C_0603in" H 5888 5250 50  0001 C CNN
+F 3 "" H 5850 5400 50  0000 C CNN
+	1    5850 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR023
+U 1 1 58522C3F
+P 5400 5850
+F 0 "#PWR023" H 5400 5600 50  0001 C CNN
+F 1 "GND" H 5405 5696 25  0000 C CNN
+F 2 "" H 5400 5850 50  0000 C CNN
+F 3 "" H 5400 5850 50  0000 C CNN
+	1    5400 5850
+	1    0    0    -1  
+$EndComp
+Text HLabel 2700 4800 2    60   Input ~ 0
+W_out
+Text HLabel 1450 4800 0    60   Input ~ 0
+W_in
+$Comp
+L R R24
+U 1 1 58523A58
+P 5750 1250
+F 0 "R24" V 5543 1250 50  0000 C CNN
+F 1 "no.Ass." V 5634 1250 50  0000 C CNN
+F 2 "tera_rlc:R_0603in" V 5680 1250 50  0001 C CNN
+F 3 "" H 5750 1250 50  0000 C CNN
+	1    5750 1250
+	0    1    1    0   
+$EndComp
+$Comp
+L C C17
+U 1 1 58523A64
+P 6100 1650
+F 0 "C17" H 6215 1696 50  0000 L CNN
+F 1 "no.Ass." H 6215 1605 50  0000 L CNN
+F 2 "tera_rlc:C_0603in" H 6138 1500 50  0001 C CNN
+F 3 "" H 6100 1650 50  0000 C CNN
+	1    6100 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR024
+U 1 1 58523A72
+P 6100 2000
+F 0 "#PWR024" H 6100 1750 50  0001 C CNN
+F 1 "GND" H 6105 1846 25  0000 C CNN
+F 2 "" H 6100 2000 50  0000 C CNN
+F 3 "" H 6100 2000 50  0000 C CNN
+	1    6100 2000
+	1    0    0    -1  
+$EndComp
+Text HLabel 8650 3350 2    60   Input ~ 0
+current_v_amp
+$Comp
+L R R26
+U 1 1 58523A88
+P 7300 700
+F 0 "R26" V 7093 700 50  0000 C CNN
+F 1 "0R" V 7184 700 50  0000 C CNN
+F 2 "tera_rlc:R_0603in" V 7230 700 50  0001 C CNN
+F 3 "" H 7300 700 50  0000 C CNN
+	1    7300 700 
+	0    1    1    0   
+$EndComp
+Text HLabel 1150 3150 0    60   Input ~ 0
+V_in
+Text HLabel 2750 3550 0    60   Input ~ 0
+V_out
+$Comp
+L LMV342 IC4
+U 2 1 5852B05F
+P 7450 1350
+F 0 "IC4" H 7450 1717 50  0000 C CNN
+F 1 "LMV342" H 7450 1626 50  0000 C CNN
+F 2 "tera_atomic_ic:LMV342" H 7450 1100 50  0001 L CNN
+F 3 "" H 7450 1000 50  0001 L CNN
+	2    7450 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L LMV342 IC4
+U 3 1 5852B147
+P 5400 5450
+F 0 "IC4" H 5458 5546 50  0000 L CNN
+F 1 "LMV342" H 5458 5455 50  0000 L CNN
+F 2 "tera_atomic_ic:LMV342" H 5400 5200 50  0001 L CNN
+F 3 "" H 5400 5100 50  0001 L CNN
+	3    5400 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R19
+U 1 1 5855AE28
+P 1800 3350
+F 0 "R19" H 1870 3396 50  0000 L CNN
+F 1 "22k" H 1870 3305 50  0000 L CNN
+F 2 "tera_rlc:R_0603in" V 1730 3350 50  0001 C CNN
+F 3 "" H 1800 3350 50  0000 C CNN
+	1    1800 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R20
+U 1 1 5855AE6A
+P 1800 3750
+F 0 "R20" H 1870 3796 50  0000 L CNN
+F 1 "1k5" H 1870 3705 50  0000 L CNN
+F 2 "tera_rlc:R_0603in" V 1730 3750 50  0001 C CNN
+F 3 "" H 1800 3750 50  0000 C CNN
+	1    1800 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR025
+U 1 1 5855B02C
+P 1800 4000
+F 0 "#PWR025" H 1800 3750 50  0001 C CNN
+F 1 "GND" H 1805 3846 25  0000 C CNN
+F 2 "" H 1800 4000 50  0000 C CNN
+F 3 "" H 1800 4000 50  0000 C CNN
+	1    1800 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C8
+U 1 1 5855B54D
+P 1400 3750
+F 0 "C8" H 1515 3796 50  0000 L CNN
+F 1 "100nF" H 1515 3705 50  0000 L CNN
+F 2 "tera_rlc:C_0603in" H 1438 3600 50  0001 C CNN
+F 3 "" H 1400 3750 50  0000 C CNN
+	1    1400 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR026
+U 1 1 5855B63B
+P 1400 4000
+F 0 "#PWR026" H 1400 3750 50  0001 C CNN
+F 1 "GND" H 1405 3846 25  0000 C CNN
+F 2 "" H 1400 4000 50  0000 C CNN
+F 3 "" H 1400 4000 50  0000 C CNN
+	1    1400 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R17
+U 1 1 5855BAA5
+P 1900 5050
+F 0 "R17" H 1970 5096 50  0000 L CNN
+F 1 "22k" H 1970 5005 50  0000 L CNN
+F 2 "tera_rlc:R_0603in" V 1830 5050 50  0001 C CNN
+F 3 "" H 1900 5050 50  0000 C CNN
+	1    1900 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R18
+U 1 1 5855BAAB
+P 1900 5450
+F 0 "R18" H 1970 5496 50  0000 L CNN
+F 1 "1k5" H 1970 5405 50  0000 L CNN
+F 2 "tera_rlc:R_0603in" V 1830 5450 50  0001 C CNN
+F 3 "" H 1900 5450 50  0000 C CNN
+	1    1900 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR027
+U 1 1 5855BAB4
+P 1900 5700
+F 0 "#PWR027" H 1900 5450 50  0001 C CNN
+F 1 "GND" H 1905 5546 25  0000 C CNN
+F 2 "" H 1900 5700 50  0000 C CNN
+F 3 "" H 1900 5700 50  0000 C CNN
+	1    1900 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C7
+U 1 1 5855BABA
+P 1500 5450
+F 0 "C7" H 1615 5496 50  0000 L CNN
+F 1 "100nF" H 1615 5405 50  0000 L CNN
+F 2 "tera_rlc:C_0603in" H 1538 5300 50  0001 C CNN
+F 3 "" H 1500 5450 50  0000 C CNN
+	1    1500 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR028
+U 1 1 5855BAC3
+P 1500 5700
+F 0 "#PWR028" H 1500 5450 50  0001 C CNN
+F 1 "GND" H 1505 5546 25  0000 C CNN
+F 2 "" H 1500 5700 50  0000 C CNN
+F 3 "" H 1500 5700 50  0000 C CNN
+	1    1500 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R21
+U 1 1 5855BF8F
+P 1900 2000
+F 0 "R21" H 1970 2046 50  0000 L CNN
+F 1 "22k" H 1970 1955 50  0000 L CNN
+F 2 "tera_rlc:R_0603in" V 1830 2000 50  0001 C CNN
+F 3 "" H 1900 2000 50  0000 C CNN
+	1    1900 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R22
+U 1 1 5855BF95
+P 1900 2400
+F 0 "R22" H 1970 2446 50  0000 L CNN
+F 1 "1k5" H 1970 2355 50  0000 L CNN
+F 2 "tera_rlc:R_0603in" V 1830 2400 50  0001 C CNN
+F 3 "" H 1900 2400 50  0000 C CNN
+	1    1900 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR029
+U 1 1 5855BF9E
+P 1900 2650
+F 0 "#PWR029" H 1900 2400 50  0001 C CNN
+F 1 "GND" H 1905 2496 25  0000 C CNN
+F 2 "" H 1900 2650 50  0000 C CNN
+F 3 "" H 1900 2650 50  0000 C CNN
+	1    1900 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C9
+U 1 1 5855BFA4
+P 1500 2400
+F 0 "C9" H 1615 2446 50  0000 L CNN
+F 1 "100nF" H 1615 2355 50  0000 L CNN
+F 2 "tera_rlc:C_0603in" H 1538 2250 50  0001 C CNN
+F 3 "" H 1500 2400 50  0000 C CNN
+	1    1500 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR030
+U 1 1 5855BFAD
+P 1500 2650
+F 0 "#PWR030" H 1500 2400 50  0001 C CNN
+F 1 "GND" H 1505 2496 25  0000 C CNN
+F 2 "" H 1500 2650 50  0000 C CNN
+F 3 "" H 1500 2650 50  0000 C CNN
+	1    1500 2650
+	1    0    0    -1  
+$EndComp
+Text HLabel 1400 5250 0    60   Input ~ 0
+voltage_w
+Text HLabel 1300 3550 0    60   Input ~ 0
+voltage_v
+Text HLabel 1400 2200 0    60   Input ~ 0
+voltage_u
+$Comp
+L +3V3 #PWR031
+U 1 1 585934D9
+P 5400 4950
+F 0 "#PWR031" H 5400 4800 50  0001 C CNN
+F 1 "+3V3" H 5415 5099 20  0000 C CNN
+F 2 "" H 5400 4950 50  0000 C CNN
+F 3 "" H 5400 4950 50  0000 C CNN
+	1    5400 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L HO_25-NP/SP33 IC2
+U 1 1 58557B33
+P 3350 3450
+F 0 "IC2" H 3350 3997 60  0000 C CNN
+F 1 "HO_25-NP/SP33" H 3350 3891 60  0000 C CNN
+F 2 "tera_atomic_ic:HO_25-NP_SP33" H 3400 2900 60  0001 C CNN
+F 3 "" H 3100 3450 60  0001 C CNN
+	1    3350 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R23
+U 1 1 5852F54B
+P 5800 3250
+F 0 "R23" V 5593 3250 50  0000 C CNN
+F 1 "no.Ass." V 5684 3250 50  0000 C CNN
+F 2 "tera_rlc:R_0603in" V 5730 3250 50  0001 C CNN
+F 3 "" H 5800 3250 50  0000 C CNN
+	1    5800 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR032
+U 1 1 585588EF
+P 3800 4100
+F 0 "#PWR032" H 3800 3850 50  0001 C CNN
+F 1 "GND" H 3805 3946 25  0000 C CNN
+F 2 "" H 3800 4100 50  0000 C CNN
+F 3 "" H 3800 4100 50  0000 C CNN
+	1    3800 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR033
+U 1 1 585593AD
+P 4000 2800
+F 0 "#PWR033" H 4000 2650 50  0001 C CNN
+F 1 "+3V3" H 4015 2949 20  0000 C CNN
+F 2 "" H 4000 2800 50  0000 C CNN
+F 3 "" H 4000 2800 50  0000 C CNN
+	1    4000 2800
+	1    0    0    -1  
+$EndComp
+Text HLabel 5050 3550 2    60   Input ~ 0
+LEM_standby
+$Comp
+L C C10
+U 1 1 5855E020
+P 4000 3750
+F 0 "C10" H 4115 3796 50  0000 L CNN
+F 1 "47nF" H 4115 3705 50  0000 L CNN
+F 2 "tera_rlc:C_0603in" H 4038 3600 50  0001 C CNN
+F 3 "" H 4000 3750 50  0000 C CNN
+	1    4000 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR034
+U 1 1 5855E124
+P 4000 4100
+F 0 "#PWR034" H 4000 3850 50  0001 C CNN
+F 1 "GND" H 4005 3946 25  0000 C CNN
+F 2 "" H 4000 4100 50  0000 C CNN
+F 3 "" H 4000 4100 50  0000 C CNN
+	1    4000 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C12
+U 1 1 5855E2CC
+P 4450 3750
+F 0 "C12" H 4565 3796 50  0000 L CNN
+F 1 "47nF" H 4565 3705 50  0000 L CNN
+F 2 "tera_rlc:C_0603in" H 4488 3600 50  0001 C CNN
+F 3 "" H 4450 3750 50  0000 C CNN
+	1    4450 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR035
+U 1 1 5855EB96
+P 4450 4100
+F 0 "#PWR035" H 4450 3850 50  0001 C CNN
+F 1 "GND" H 4455 3946 25  0000 C CNN
+F 2 "" H 4450 4100 50  0000 C CNN
+F 3 "" H 4450 4100 50  0000 C CNN
+	1    4450 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C14
+U 1 1 5855ECC4
+P 4900 3750
+F 0 "C14" H 5015 3796 50  0000 L CNN
+F 1 "4.7nF" H 5015 3705 50  0000 L CNN
+F 2 "tera_rlc:C_0603in" H 4938 3600 50  0001 C CNN
+F 3 "" H 4900 3750 50  0000 C CNN
+	1    4900 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR036
+U 1 1 5855EE59
+P 4900 4100
+F 0 "#PWR036" H 4900 3850 50  0001 C CNN
+F 1 "GND" H 4905 3946 25  0000 C CNN
+F 2 "" H 4900 4100 50  0000 C CNN
+F 3 "" H 4900 4100 50  0000 C CNN
+	1    4900 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L HO_25-NP/SP33 IC3
+U 1 1 5855F7AC
+P 3300 1450
+F 0 "IC3" H 3300 1997 60  0000 C CNN
+F 1 "HO_25-NP/SP33" H 3300 1891 60  0000 C CNN
+F 2 "tera_atomic_ic:HO_25-NP_SP33" H 3350 900 60  0001 C CNN
+F 3 "" H 3050 1450 60  0001 C CNN
+	1    3300 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR037
+U 1 1 5855F7B6
+P 3750 2100
+F 0 "#PWR037" H 3750 1850 50  0001 C CNN
+F 1 "GND" H 3755 1946 25  0000 C CNN
+F 2 "" H 3750 2100 50  0000 C CNN
+F 3 "" H 3750 2100 50  0000 C CNN
+	1    3750 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR038
+U 1 1 5855F7C0
+P 3950 800
+F 0 "#PWR038" H 3950 650 50  0001 C CNN
+F 1 "+3V3" H 3965 949 20  0000 C CNN
+F 2 "" H 3950 800 50  0000 C CNN
+F 3 "" H 3950 800 50  0000 C CNN
+	1    3950 800 
+	1    0    0    -1  
+$EndComp
+Text HLabel 5000 1550 2    60   Input ~ 0
+LEM_standby
+$Comp
+L C C11
+U 1 1 5855F7CC
+P 3950 1750
+F 0 "C11" H 4065 1796 50  0000 L CNN
+F 1 "47nF" H 4065 1705 50  0000 L CNN
+F 2 "tera_rlc:C_0603in" H 3988 1600 50  0001 C CNN
+F 3 "" H 3950 1750 50  0000 C CNN
+	1    3950 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR039
+U 1 1 5855F7D2
+P 3950 2100
+F 0 "#PWR039" H 3950 1850 50  0001 C CNN
+F 1 "GND" H 3955 1946 25  0000 C CNN
+F 2 "" H 3950 2100 50  0000 C CNN
+F 3 "" H 3950 2100 50  0000 C CNN
+	1    3950 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C13
+U 1 1 5855F7DA
+P 4400 1750
+F 0 "C13" H 4515 1796 50  0000 L CNN
+F 1 "47nF" H 4515 1705 50  0000 L CNN
+F 2 "tera_rlc:C_0603in" H 4438 1600 50  0001 C CNN
+F 3 "" H 4400 1750 50  0000 C CNN
+	1    4400 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR040
+U 1 1 5855F7F1
+P 4400 2100
+F 0 "#PWR040" H 4400 1850 50  0001 C CNN
+F 1 "GND" H 4405 1946 25  0000 C CNN
+F 2 "" H 4400 2100 50  0000 C CNN
+F 3 "" H 4400 2100 50  0000 C CNN
+	1    4400 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C15
+U 1 1 5855F7F8
+P 4850 1750
+F 0 "C15" H 4965 1796 50  0000 L CNN
+F 1 "4.7nF" H 4965 1705 50  0000 L CNN
+F 2 "tera_rlc:C_0603in" H 4888 1600 50  0001 C CNN
+F 3 "" H 4850 1750 50  0000 C CNN
+	1    4850 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR041
+U 1 1 5855F800
+P 4850 2100
+F 0 "#PWR041" H 4850 1850 50  0001 C CNN
+F 1 "GND" H 4855 1946 25  0000 C CNN
+F 2 "" H 4850 2100 50  0000 C CNN
+F 3 "" H 4850 2100 50  0000 C CNN
+	1    4850 2100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3750 3450
+NoConn ~ 3700 1450
+Text Notes 6600 1900 0    60   ~ 0
+OPV still neccesarry for LEM sensors? probably not
+Wire Wire Line
+	5950 3250 7200 3250
+Wire Wire Line
+	6200 3250 6200 3500
+Connection ~ 6200 3250
+Wire Wire Line
+	6200 3800 6200 4000
+Wire Wire Line
+	7800 3350 8650 3350
+Wire Wire Line
+	8150 3350 8150 2800
+Wire Wire Line
+	8150 2800 7550 2800
+Connection ~ 8150 3350
+Wire Wire Line
+	3750 3250 5650 3250
+Wire Wire Line
+	7250 2800 6600 2800
+Wire Wire Line
+	5850 5250 5850 5050
+Wire Wire Line
+	5850 5050 5400 5050
+Wire Wire Line
+	5400 4950 5400 5150
+Wire Wire Line
+	5850 5550 5850 5750
+Wire Wire Line
+	5850 5750 5400 5750
+Wire Wire Line
+	5400 5650 5400 5850
+Connection ~ 5400 5050
+Connection ~ 5400 5750
+Wire Wire Line
+	7150 1450 7050 1450
+Wire Wire Line
+	5900 1250 7150 1250
+Wire Wire Line
+	6100 1500 6100 1250
+Connection ~ 6100 1250
+Wire Wire Line
+	6100 1800 6100 2000
+Wire Wire Line
+	7050 1450 7050 1700
+Wire Wire Line
+	7050 1700 7850 1700
+Wire Wire Line
+	7850 1700 7850 1350
+Wire Wire Line
+	7750 1350 8650 1350
+Connection ~ 7850 1350
+Wire Wire Line
+	8150 1350 8150 700 
+Wire Wire Line
+	8150 700  7450 700 
+Connection ~ 8150 1350
+Wire Wire Line
+	7150 700  6650 700 
+Wire Wire Line
+	1450 4800 2700 4800
+Wire Wire Line
+	2750 3550 2950 3550
+Wire Wire Line
+	2900 3150 2900 3350
+Wire Wire Line
+	2900 3250 2950 3250
+Connection ~ 2900 3150
+Wire Wire Line
+	2950 3650 2900 3650
+Wire Wire Line
+	2900 3550 2900 3750
+Wire Wire Line
+	1150 3150 2950 3150
+Wire Wire Line
+	2900 3750 2950 3750
+Connection ~ 7900 3350
+Wire Wire Line
+	7900 3700 7900 3350
+Wire Wire Line
+	7200 3450 7100 3450
+Wire Wire Line
+	7100 3450 7100 3700
+Wire Wire Line
+	7100 3700 7900 3700
+Connection ~ 6600 3250
+Wire Wire Line
+	6600 2800 6600 3250
+Wire Wire Line
+	6650 700  6650 1250
+Connection ~ 6650 1250
+Wire Wire Line
+	1800 3200 1800 3150
+Connection ~ 1800 3150
+Wire Wire Line
+	1800 3500 1800 3600
+Wire Wire Line
+	1800 3900 1800 4000
+Wire Wire Line
+	1300 3550 1800 3550
+Wire Wire Line
+	1400 3550 1400 3600
+Connection ~ 1800 3550
+Wire Wire Line
+	1400 4000 1400 3900
+Wire Wire Line
+	1900 5200 1900 5300
+Wire Wire Line
+	1900 5600 1900 5700
+Wire Wire Line
+	1400 5250 1900 5250
+Wire Wire Line
+	1500 5250 1500 5300
+Connection ~ 1900 5250
+Wire Wire Line
+	1500 5700 1500 5600
+Wire Wire Line
+	1900 4900 1900 4800
+Connection ~ 1900 4800
+Wire Wire Line
+	1900 2150 1900 2250
+Wire Wire Line
+	1900 2550 1900 2650
+Wire Wire Line
+	1400 2200 1900 2200
+Wire Wire Line
+	1500 2200 1500 2250
+Connection ~ 1900 2200
+Wire Wire Line
+	1500 2650 1500 2550
+Connection ~ 1500 2200
+Connection ~ 1500 5250
+Connection ~ 1400 3550
+Wire Wire Line
+	2900 3350 2950 3350
+Connection ~ 2900 3250
+Connection ~ 2900 3650
+Wire Wire Line
+	3800 3650 3800 4100
+Wire Wire Line
+	3800 3650 3750 3650
+Wire Wire Line
+	3750 3750 3800 3750
+Connection ~ 3800 3750
+Wire Wire Line
+	3750 3150 4000 3150
+Wire Wire Line
+	4000 2800 4000 3600
+Wire Wire Line
+	3750 3550 5050 3550
+Wire Wire Line
+	4000 4100 4000 3900
+Connection ~ 4000 3150
+Wire Wire Line
+	3750 3350 4450 3350
+Wire Wire Line
+	4450 3350 4450 3600
+Wire Wire Line
+	4450 4100 4450 3900
+Wire Wire Line
+	4900 3600 4900 3250
+Connection ~ 4900 3250
+Wire Wire Line
+	4900 4100 4900 3900
+Wire Wire Line
+	3700 1250 5600 1250
+Wire Wire Line
+	1450 1750 2900 1750
+Wire Wire Line
+	2850 1150 2850 1350
+Wire Wire Line
+	2850 1250 2900 1250
+Connection ~ 2850 1150
+Wire Wire Line
+	2900 1650 2850 1650
+Wire Wire Line
+	2850 1550 2850 1750
+Wire Wire Line
+	2800 1150 2900 1150
+Connection ~ 2850 1750
+Wire Wire Line
+	2850 1350 2900 1350
+Connection ~ 2850 1250
+Wire Wire Line
+	2850 1550 2900 1550
+Connection ~ 2850 1650
+Wire Wire Line
+	3750 1650 3750 2100
+Wire Wire Line
+	3750 1650 3700 1650
+Wire Wire Line
+	3700 1750 3750 1750
+Connection ~ 3750 1750
+Wire Wire Line
+	3700 1150 3950 1150
+Wire Wire Line
+	3950 800  3950 1600
+Wire Wire Line
+	3700 1550 5000 1550
+Wire Wire Line
+	3950 2100 3950 1900
+Connection ~ 3950 1150
+Wire Wire Line
+	3700 1350 4400 1350
+Wire Wire Line
+	4400 1350 4400 1600
+Wire Wire Line
+	4400 2100 4400 1900
+Wire Wire Line
+	4850 1250 4850 1600
+Connection ~ 4850 1250
+Wire Wire Line
+	4850 2100 4850 1900
+Connection ~ 2900 3550
+Connection ~ 7200 500 
+Wire Wire Line
+	1900 1850 1900 1750
+Connection ~ 1900 1750
+Text Notes 2850 4400 0    60   ~ 0
+Vref Capacity neccesary if not conencted to anything?
+Text Notes 2600 5450 0    60   ~ 0
+C8, C9: f_g ca. bei 6x Motordrehzahl\nw_g=2pi*f_g=1/((22k||15k) * C8/9)
+$EndSCHEMATC
