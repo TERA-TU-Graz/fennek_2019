@@ -1,0 +1,3 @@
+[submodule "HW/libraries"]
+	path = HW/libraries
+	url = git@github.com:TERA-TU-Graz/ECad_Library.git
